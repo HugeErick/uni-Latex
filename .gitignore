@@ -1,0 +1,4 @@
+static/
+*.aux
+*.log
+*.gz

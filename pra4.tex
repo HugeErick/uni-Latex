@@ -1,0 +1,191 @@
+\documentclass{article}
+%\usepackage[spanish,activeacute]{babel}
+%\usepackage[english,activeacute]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{amsmath,amsfonts,amssymb,amstext,amsthm,amscd}
+%\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{graphicx}
+%\usepackage{subfigure}
+\usepackage{subfig}
+%\linespread{1.6}
+\usepackage{float}
+\usepackage{dcolumn}% Align table columns on decimal point(esto lo saque del ejemplo de revtex4)
+\usepackage{bm}% bold math(esto lo saque del ejemplo de revtex4)
+\newcounter{itemR}
+\usepackage{here} %recordar usar el comandao[H] Para las  graficas que es el comando here en lugar de [h!]
+\usepackage{fancyhdr}
+%\usepackage{sidecap}
+%\usepackage[spanish,activeacute]{babel}
+%\usepackage{multirow}
+\usepackage{multicol}
+%\usepackage{array}
+%\usepackage{booktabs}% para hacer tablas profesionales con \toprule
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\usepackage[paperwidth=8.5in, paperheight=11.0in, top=1.0in, bottom=1.0in, left=1.0in, right=1.0in]{geometry}
+
+\pagestyle{fancyplain}
+\fancyhead[LE,RO]{Pr\'actica $\#$4, MRU}
+\fancyhead[CE,CO]{}
+\fancyhead[RE,LO]{P23-FIS1012-12}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[CE,CO]{Laboratorio de F\'isica, UDLAP}
+\fancyfoot[RE,LO]{}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+\fancypagestyle{plain}{
+   	\renewcommand{\headrulewidth}{1pt}
+   	\renewcommand{\footrulewidth}{1pt}
+}
+
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\title{Movimiento Rectilíneo Uniforme}
+\author{\small{Erick Gonzalez Parada ID: 178145, Leonardo Escamilla Salgado ID: 179021 $\&$ Daniela Lomán Barrueta ID: 179062.}\\		% ----- Varios autores separarlos por comas:  \small{Nombre(s) de (los) autor(es)\footnote{ID; correo@udlap.mx}, Nombre(s) de (los) autor(es)\footnote{ID; correo@udlap.mx}
+	   \small{Depto. de Actuaría, Física y Matemáticas, Universidad de las Américas Puebla, Puebla, M\'exico 72810}}
+\date{\small{\today}}
+
+\maketitle
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{abstract}
+
+El experimento consiste en tener un móvil con la menor fricción posible en un riel de tal manera que se puede observar las características de movimiento rectilíneo uniforme midiendo el tiempo que tarda de un punto A a un punto B.
+\\
+\\
+{\it Keywords:}  Velocidad, Uniforme, tiempo
+\\
+\\
+\end{abstract}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{multicols}{2}
+
+
+
+\section*{Desarrollo teórico}\label{Desarrollo Teorico}                              	% -------------------- Introduccion
+
+El movimiento rectilíneo uniforme (MRU) es un tipo de movimiento en el que un objeto se mueve en línea recta a una velocidad constante. Es decir, la velocidad del objeto no varía en el tiempo y su trayectoria es una línea recta.
+\\
+
+El MRU es un concepto fundamental en la física, ya que permite entender y describir muchos otros movimientos más complejos. Además, se utiliza en muchas aplicaciones prácticas, como en la física de partículas, la ingeniería, la navegación y la ciencia espacial.
+\\
+\\
+En términos matemáticos, la velocidad constante del objeto en MRU se expresa mediante la ecuación:
+\begin{equation}\label{Ec:1}
+	Vprom = d/t
+\end{equation}
+donde "v" es la velocidad del objeto en metros por segundo (m/s), "d" es la distancia recorrida en metros (m) y "t" es el tiempo transcurrido en segundos (s).
+\\
+También podemos expresar la posición del objeto en MRU mediante la ecuación:
+\begin{equation}\label{Ec:2}
+	x = xo + vt
+\end{equation}
+donde "x" es la posición del objeto en metros (m), "xo" es la posición inicial del objeto en metros (m) y "t" es el tiempo transcurrido en segundos (s).
+\\
+\\
+Es importante destacar que, en MRU, la aceleración del objeto es nula, ya que su velocidad no cambia. La aceleración se define como el cambio en la velocidad del objeto por unidad de tiempo, y al ser constante, la aceleración en MRU es cero.
+\\
+\\
+Importante mencionar que nuestro objetivo es obtener la relación de proporcionalidad para un móvil que se mueve con mínima fricción sobre un riel de aire horizontal. 
+
+
+
+
+\section*{Desarrollo Experimental}\label{Desarrollo experimental}				% -------------------- Metodolog'ia
+
+Nosotros como equipo proseguimos a medir el tiempo que se tardaba el móvil en entrar a una compuerta pasarla llegar a la otra y pasarla, es decir, el tiempo empezaba a correr justo cuando pasa totalmente la primera foto compuerta y terminaba cuando pasa totalmente la segunda foto compuerta, se midieron 10 distintas distancias que existían entre las foto compuertas, el tiempo se midió con un ”Smart Timer” conectado a las foto compuertas para recibir el input de los sensores integrados en estas.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=2.5]{static/skeleteonpra4.png}
+	\caption{Diagrama de mesa de trabajo}
+	\label{fig:1}
+\end{figure}
+
+\section*{Resultados y análisis}\label{Resultados}			% -------------------- Resultados
+
+En esta sección no sólo se presentan tablas y gráficas sino que se explican los datos experimentales obtenidos, se hace un análisis de los mismos y se presentan valores numéricos de los errores experimentales. 
+
+Las tablas llevan nombre de las columnas con unidades correspondientes y un pie de tabla donde se indiqua lo que hay en la tabla. Es muy importante decir algo respecto a cada tabla que se incluye usando el nombre específico de dicha tabla, por ejemplo:
+
+En la Tabla (\ref{Tabla:1}) se ven los resultados del experimento.
+
+Evita las expresiones: en la tabla siguiente, en la tabla de abajo, en la tabla de arriba, la tabla a continuación.
+%
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ | r | r | }
+	\hline
+		x [m]		&	t [s] 			\\%	\hline
+		1.0		&	1.0			\\
+		4.0		&	2.0			\\
+		9.0		&	3.0			\\
+		16.0		&	4.0			\\
+		25.0		&	5.0			\\
+	\hline
+	\end{tabular}
+	\caption{Posici\'on de la partícula en funci\'on del tiempo}
+	\label{Tabla:1}
+\end{table}
+
+Las figuras no llevan título pero sí incluyen un pie de figura que describe la imagen/gráfica y que no es parte de la misma imagen; las gr\'aficas deben llevar el nombre de los ejes y las unidades utilizadas. Es muy importante decir algo de cada figura que se incluye usando el nombre específico de dicha figura, por ejemplo: 
+
+La Figura \ref{Fig:1} es un ejemplo de la gráfica obtenida con experimento de caída libre del laboratorio de mecánica. 
+
+Evita las expresiones: en la figura siguiente, en la figura de abajo, en la figura de arriba, la figura a continuación. 
+
+Los datos de las gráficas deben abarcar toda el área de la gráfica así como se muestra en la Figura \ref{Fig:1} y no debe quedar como se muestra en la Figura \ref{Fig:2}
+
+
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale = 0.5]{fig2}
+%	\caption{Posición de la partícula en función del tiempo donde los datos abarcan toda el área de la gráfica}
+%	\label{Fig:1}
+%\end{figure}
+
+
+
+\section*{Conclusiones}\label{Conclusiones}				% -------------------- Conclusiones
+
+En esta sección se deben exponer las conclusiones finales del trabajo sin enlistar. Las conclusiones consisten en al menos tres aspectos importantes: 1) Una comparación entre los resultados experimentales y la teoría: esta parte reponde a la preguntas ¿los resultados experimentales concuerdan con el modelo físico teórico? ¿cuánto concuerdan?, la comparación se escribe usando como referencia las secciones "Desarrollo teórico" y "Resultados y Análisis". 2) Una discusión sobre las posibles fuentes de error y una discusión sobre los valores numéricos de los errores calculados en la sección "Resultados y Análisis". 3) Propuestas necesarias para mejorar tanto el modelo teórico como la metodología experimental de la práctica.
+
+\begin{thebibliography}{9}						% -------------------- Bibliograf'ia
+
+%\bibitem{Einstein}
+%   Albert Einstein,   \emph{The world as I see it}.   BN %Publishing,   2005.
+%
+\end{thebibliography}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\end{multicols}
+
+\end{document}										% -------------------- End Document
