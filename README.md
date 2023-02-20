@@ -1,7 +1,7 @@
-## uni-Latex
+# uni-Latex
 latex reports
 
-# corrections
+## corrections
 {practica 4}
 add mandatory bibliography,
 be insanely specific in "desarrollo experimental" (take photos)
