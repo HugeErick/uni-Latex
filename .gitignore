@@ -2,3 +2,5 @@ static/
 *.aux
 *.log
 *.gz
+*.fls
+*.fdb_latexmk
