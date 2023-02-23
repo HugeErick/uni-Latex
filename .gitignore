@@ -4,3 +4,4 @@ static/
 *.gz
 *.fls
 *.fdb_latexmk
+*.vscode
