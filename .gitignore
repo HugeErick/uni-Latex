@@ -5,3 +5,4 @@ static/
 *.fls
 *.fdb_latexmk
 *.vscode
+*.out
