@@ -116,8 +116,6 @@ Importante mencionar que nuestro objetivo es obtener la relación de proporciona
 Lo primero que se realizo fue analizar como quedarían nuestras tablas para poder trazar nuestras gráficas,\\
 después de que eso quedase claro montamos el riel triangular que se encuentra debajo nuestra mesa y lo conectamos con el compresor para que la fricción de cualquier cosa que se monte en el riel sufra una fricción mínima.
 Conectamos a la corriente el smart timer y el compresor de aire (para comprobar que el riel sacase aire). Las foto compuertas se atornillaron a una base con varas que permitían que estas llegasen a la altura para que puedan enviar la señal al pasar la bandera (pedazo de metal que se monta al riel para que los sensores de movimiento de las foto compuertas manden la señal).  
-Ya una vez que se monto todo se acomodaron unas ligas en los extremos del riel para que el móvil rebotara por lo tanto en ese punto empezamos a acomodar las foto compuertas de tal manera que nos dieran una distancia de 10 en 10 centímetros.
-Con esa configuración empezamos a recolectar los tiempos que arrojaba el smart timer.  
 
 \begin{figure}[H]
 	\centering
@@ -126,39 +124,33 @@ Con esa configuración empezamos a recolectar los tiempos que arrojaba el smart 
 	\label{fig:1}
 \end{figure}
 
+Ya una vez que se monto todo se acomodaron unas ligas en los extremos del riel para que el móvil rebotara por lo tanto en ese punto empezamos a acomodar las foto compuertas de tal manera que nos dieran una distancia de 10 en 10 centímetros.
+Con esa configuración empezamos a recolectar los tiempos que arrojaba el smart timer.  
+
+\end{multicols}
 \section*{Resultados y análisis}\label{Resultados}			% -------------------- Resultados
 
-En esta sección no sólo se presentan tablas y gráficas sino que se explican los datos experimentales obtenidos, se hace un análisis de los mismos y se presentan valores numéricos de los errores experimentales. 
-
-Las tablas llevan nombre de las columnas con unidades correspondientes y un pie de tabla donde se indiqua lo que hay en la tabla. Es muy importante decir algo respecto a cada tabla que se incluye usando el nombre específico de dicha tabla, por ejemplo:
-
-En la Tabla (\ref{Tabla:1}) se ven los resultados del experimento.
-
-Evita las expresiones: en la tabla siguiente, en la tabla de abajo, en la tabla de arriba, la tabla a continuación.
-%
+En la tabla \ref{Tabla:1} se muestran las 5 mediciones de tiempo obtenidas referentes a cada trayecto recorrido por el móvil con intervalos de 10 cm (en la tabla \ref{Tabla:1}, toda unidad en cm se paso a metros).
 \begin{table}[H]
 	\centering
-	\begin{tabular}{ | r | r | }
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
 	\hline
-		x [m]		&	t [s] 			\\%	\hline
-		1.0		&	1.0			\\
-		4.0		&	2.0			\\
-		9.0		&	3.0			\\
-		16.0		&	4.0			\\
-		25.0		&	5.0			\\
+	Distancia (m) & 0.1 & 0.2 & 0.3 & 0.4 & 0.5 & 0.6 & 0.7 & 0.8 & 0.9 & 1 \\
+	\hline
+	$t_1$ (s) $\pm$ 0.0001s & 0.2162 & 0.4001 & 0.5981 & 0.8284 & 0.9561 & 1.1616 & 1.4172 & 1.7819 & 1.9452 & 1.9523 \\
+	\hline
+	$t_2$ (s) $\pm$ 0.0001s & 0.2077 & 0.4243 & 0.6986 & 0.7967 & 0.9321 & 1.195 & 1.3454 & 1.9464 & 1.7747 & 1.9628 \\
+	\hline
+	$t_3$ (s) $\pm$ 0.0001s & 0.2037 & 0.4191 & 0.6595 & 0.769 & 1.0328 & 1.206 & 1.4833 & 1.4852 & 1.8828 & 2.224 \\
+	\hline
+	$t_4$ (s) $\pm$ 0.0001s & 0.2323 & 0.4161 & 0.7455 & 0.8104 & 0.9685 & 1.1826 & 1.4456 & 1.5394 & 1.7417 & 2.0288 \\
+	\hline
+	$t_5$ (s) $\pm$ 0.0001s & 0.2347 & 0.4342 & 0.6039 & 0.79 & 0.9785 & 1.1605 & 1.4761 & 1.6872 & 2.0531 & 1.5468 \\
 	\hline
 	\end{tabular}
-	\caption{Posici\'on de la partícula en funci\'on del tiempo}
+	\caption{Tiempo medido con respecto a distancia}
 	\label{Tabla:1}
 \end{table}
-
-Las figuras no llevan título pero sí incluyen un pie de figura que describe la imagen/gráfica y que no es parte de la misma imagen; las gr\'aficas deben llevar el nombre de los ejes y las unidades utilizadas. Es muy importante decir algo de cada figura que se incluye usando el nombre específico de dicha figura, por ejemplo: 
-
-La Figura es un ejemplo de la gráfica obtenida con experimento de caída libre del laboratorio de mecánica. 
-
-Evita las expresiones: en la figura siguiente, en la figura de abajo, en la figura de arriba, la figura a continuación. 
-
-Los datos de las gráficas deben abarcar toda el área de la gráfica así como se muestra en la Figura y no debe quedar como se muestra en la Figura 
 
 
 %\begin{figure}[H]
@@ -170,15 +162,19 @@ Los datos de las gráficas deben abarcar toda el área de la gráfica así como 
 
 
 
+\begin{multicols}{2}
 \section*{Conclusiones}\label{Conclusiones}				% -------------------- Conclusiones
 
 En esta sección se deben exponer las conclusiones finales del trabajo sin enlistar. Las conclusiones consisten en al menos tres aspectos importantes: 1) Una comparación entre los resultados experimentales y la teoría: esta parte reponde a la preguntas ¿los resultados experimentales concuerdan con el modelo físico teórico? ¿cuánto concuerdan?, la comparación se escribe usando como referencia las secciones "Desarrollo teórico" y "Resultados y Análisis". 2) Una discusión sobre las posibles fuentes de error y una discusión sobre los valores numéricos de los errores calculados en la sección "Resultados y Análisis". 3) Propuestas necesarias para mejorar tanto el modelo teórico como la metodología experimental de la práctica.
+
 
 \begin{thebibliography}{9}						% -------------------- Bibliograf'ia
 
 %\bibitem{Einstein}
 %   Albert Einstein,   \emph{The world as I see it}.   BN %Publishing,   2005.
 %
+\bibitem{Pérez}
+	Pérez H, \emph{Física general 2021}
 \end{thebibliography}
 
 % ------------------------------------------------------------------------------------------------------------------------------------------------------
