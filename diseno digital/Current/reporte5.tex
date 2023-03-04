@@ -4,7 +4,6 @@
 %\usepackage[latin1]{inputenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-
 \usepackage{amsmath,amsfonts,amssymb,amstext,amsthm,amscd}
 \usepackage{hyperref}
 \usepackage{latexsym}
@@ -16,13 +15,13 @@
 \usepackage{dcolumn}% Align table columns on decimal point(esto lo saque del ejemplo de revtex4)
 \usepackage{bm}% bold math(esto lo saque del ejemplo de revtex4)
 \newcounter{itemR}
-\usepackage{here} %recordar usar el comandao[H] Para las  graficas que es el comando here en lugar de [h!]
-\usepackage{fancyhdr}
+\usepackage{here} \usepackage{fancyhdr}
 %\usepackage{sidecap}
 %\usepackage[spanish,activeacute]{babel}
 \usepackage{multirow}
 \usepackage{multicol}
-%\usepackage{array}
+\usepackage{array}
+\usepackage{ragged2e}
 %\usepackage{booktabs}% para hacer tablas profesionales con \toprule
 
 % ------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -32,7 +31,7 @@
 \usepackage[paperwidth=8.5in, paperheight=11.0in, top=1.0in, bottom=1.0in, left=1.0in, right=1.0in]{geometry}
 
 \pagestyle{fancyplain}
-\fancyhead[LE,RO]{Reporte $\#$4}
+\fancyhead[LE,RO]{Reporte $\#$5}
 \fancyhead[CE,CO]{}
 \fancyhead[RE,LO]{P23-LRT2022-3}
 \fancyfoot[LE,RO]{\thepage}
@@ -59,11 +58,13 @@
 % ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 \title{Circuitos digitales básicos}
-\author{\small{Erick Gonzalez Parada ID: 178145 $\&$ Omar Martínez López ID: 177465} 
-\\ \small{Diseño digital}
-\\ \small{Depto. Computación Electrónica y Mecatrónica.}
-\\ \small{Docente: Dr. Juan Carlos Moreno Rodríguez}}
-     %\small{Docente: Dr. Juan Carlos Moreno Rodríguez}}\\
+\author{\small{Erick Gonzalez Parada ID: 178145 $\&$ Omar Martínez López ID: 177465}\\ 
+\small{ Depto. Computación Electrónica y Mecatrónica.} \\
+\small {Docente: Dr. Juan Carlos Moreno Rodríguez}}
+
+%\small{Depto. Computación Electrónica y Mecatrónica.}
+%\small{Docente: Dr. Juan Carlos Moreno Rodríguez}
+     %\small{Docente: Dr. Juan Carlos Moreno Rodríguez}}
 \date{\small{\today}}
 
 \maketitle
@@ -71,110 +72,266 @@
 % ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 \begin{abstract}
-El experimento consistio de montar en el protoboard la función x + y'z simplificada para comprobar sus salidas y que sea verdadero.
-\\
-\\
-{\it Keywords:}  simplificación, integrados  
-\\
-\\
+	\begin{justify}
+	Se diseño en una tarjeta de desarrollo FPGADE10
+  los siguientes diseños de hardware
+  programados en VHDL con ayuda del software Quartus;
+	la compuerta AND, OR, NAND y XOR y la función booleana F = x + y'z,
+   donde realizamos sus tablas de verdad para comprobar los resultados que nos daba 
+	 el led que encendía cuando la función es verdadera o en otras palabras, {\it que de "1"}, ver resultados obtenidos (\ref{sec:resObtenidos}).\\
+	\end{justify}
+{\it Keywords:}  tablas de verdad, diseño  
 \end{abstract}
-
 \begin{multicols}{2}
+\section{Objetivo}\label{Objetivo}
+\begin{justify}
+	Nuestros objetivos fueron los siguientes:
+	\\ El estudiante se familiariza con el entorno de diseño de VHDL y comprueba el comportamiento de compuertas lógicas y funciones básicas en tarjeta de desarrollo FPGA.
+\end{justify}	
+\section{Introducción}\label{sec:intro}
+\begin{justify}
+	En la actualidad muchos de los aparatos electrónicos con los convivimos día con día funcionan gracias a que en su interior se encuentran las instrucciones de los procesos que estos deben realizar dependiendo de cada dispositivo por su hardware y propósito, y es así que son programados para que cumplan sus funciones.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.4]{../../static/dis5fig1.jpg}
+		\caption{Sistema de monitorización de glucemia inalámbrico}
+		\label{fig:1}
+	\end{figure}
+  Esto se logra gracias a que cuentan con múltiples funciones lógicas que procesan y transforman señales de entrada en señales de salida que dependen de las anteriores  mencionadas, este proceso se pude hacer físicamente en cada dispositivo, pero es mucho más fácil que  en vez de construir estos sistemas, estos se programen y lleven a cabo en un pequeño y compacto FPGA que lo único que necesita es programarlo para que virtualmente nosotros podamos construir nuestras funciones y facilitar el trabajo.
+\end{justify}
 
-\section*{Objetivo}\label{Objetivo}
-
-Nuestro objetivo fue verificar el funcionamiento de las funciones lógicas basadas en compuertas lógicas básicas AND OR y NOT.
-
-\section*{Introducción}\label{Introducción}
-
-Todos los dispositivos electrónicos actuales, que cuenten con una placa para procesar datos, trabajan utilizando el sistema binario, y tienen que hacer todas sus funciones con sólo  ceros y unos, es por ello que estos dígitos son manipulados para que cada aparato cumpla su función, pero para esto es necesario manipular los ceros y unos con compuertas lógicas que permitan modificar la señal original, aunque muchas veces, al buscar cierto resultado se necesitan de muchas compuertas lógicas innecesarias, que solo empeoran un producto, haciéndolo más grande y caro de producir, y es por ello que siempre es importante buscar optimizar el uso de estas compuertas lógicas, ya optimizando esto, se obtiene un mejor producto en todos los aspectos. 
-Nuestra solución fue comprobar la tabla de verdad de la función simplificada por medio del protoboard.
-
-\section*{Análisis Teórico}\label{Análisis Teórico}
-Gracias a las tablas de verdad y los métodos de los mapas de Karnaugh entre otras opciones que se tiene para simplificar una función booleana y de ahí en adelante realizamos en logisim nuestro diagrama de compuertas lógica.
+\section{Análisis Teórico}\label{sec:analiTeorico}
+El diseño de hardware es el proceso de diseñar y crear circuitos electrónicos digitales utilizando herramientas de software especializadas. Los circuitos electrónicos digitales son componentes que utilizan circuitos integrados (chips) para realizar tareas específicas en dispositivos electrónicos, como computadoras, teléfonos móviles y otros sistemas electrónicos.\\
+\\
+El diseño de hardware implica varios pasos, que incluyen la definición de los requisitos del sistema, la descripción del sistema en un lenguaje de descripción de hardware (HDL) como VHDL, la simulación del circuito para verificar su funcionamiento, y la implementación del circuito utilizando herramientas de diseño y verificación de hardware.\\
+\\
+En VHDL, el diseñador de hardware describe el circuito digital utilizando una serie de entidades, procesos y señales. Las entidades describen los componentes principales del circuito, como las entradas y salidas, y los procesos describen las operaciones que se realizan en los datos que fluyen a través del circuito. Las señales se utilizan para transmitir datos entre los componentes del circuito.\\
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.45]{../static/logisim4.png}
-	\caption{Diagrama de logisim}
-	\label{fig:1}
-\end{figure}
-\section*{Procedimiento}\label{Procedimiento}
-Primero que nada se tuvo que encontrar nuestra función simplificada usando el método algebraico y comprobarla con la tabla de verdad (ver tabla 1). 
-Después construimos el siguiente circuito en el protoboard ver figura \ref{fig:2}.
-\\
-\\
-Montamos el sistema asegurándonos que los integrados estuviesen correctos, puenteamos la electricidad de tal manera que todo el protoboard tuviese corriente y por ultimo empezamos a comprobar que las salidas fuesen las correctas y lógicas a nuestro función dada.
-\\
-\\
-
-\section*{Resultados esperados}\label{Resultados esperados}
-Como se muestra en la tabla de verdad (figura 2) los resultados de nuestra función simplificada x + y'z arrojan un 1 cuando tenemos los valores 1, 4, 5, 6, y 7
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.4]{../static/tabladeverdad1.png}
-	\caption{tabla de verdad}
-	\label{table:1}
-\end{figure}
-
-\section*{Resultados obtenidos}\label{Resultados obtenidos}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.18]{../static/000.jpeg}
-	\caption{000}
+	\includegraphics[scale=0.3]{../../static/dis5fig2.png}
+	\caption{Ejemplo de código escrito en VHDL}
 	\label{fig:2}
 \end{figure}
-Cabe aclarar que nuestro led enciende cuando recibe 0 volts, es decir de nuevo estamos usando la lógica inversa para que el circuito planteado tuviera sentido y verdad.
-Como se observa en la figura \ref*{fig:2}, nuestro led esta encendido por lo que el mintermino F(0) no produce una salida verdadera, es decir, nos da un 0. 
 
-\begin{figure}[H]
+Una vez que se ha descrito el circuito en VHDL como en nuestra figura \ref{fig:2}, se puede simular para verificar su funcionamiento. La simulación permite al diseñador de hardware verificar el comportamiento del circuito en diferentes situaciones y detectar posibles errores antes de implementar el circuito en hardware físico.
+\section{Procedimiento}\label{sec:procedim}
+Primero escribimos las funciones y sus tablas de verdad (o el comportamiento de las compuertas) que nos solicitaban, estas están mencionadas en el abstract,
+luego que ya verificamos que nuestro código nos de las respuestas que queremos y necesitamos gracias a EDA Playground que nos permite ver las salidas y como interactúan las entradas a lo largo del la ejecución del código, lo que se hace a continuación es seguir una seria de pasos dentro de Quartus
+para que por medio de que la tarjeta FPGADE10 este conectada a nuestro equipo; podamos hacer la conexión de que nuestra tarjeta pueda leer el código.\\
+\\
+Una vez configurado Quartus y que nuestra tarjeta también este conectada físicamente a nuestro equipo podemos ir a pin manager para que podamos especificar muy concretamente cual parte de la tarjeta va recibir el input de nuestras entradas, es decir, si queremos que la salida la interprete un led, tenemos que identificar que nomenclatura tiene "seleccionar" ese led.\\
+\\
+Por ultimo compilamos de nuevo nuestro código dentro del mismo Quartus y especificamos que se va ocupar el USB Blaster el cual es un programador y depurador de hardware producido por Intel para su uso en dispositivos FPGA y SoC que utilizan el puerto JTAG o el protocolo de depuración Altera. El USB Blaster es compatible con una amplia variedad de dispositivos FPGA y SoC de Altera, y es compatible con varios entornos de desarrollo de software, lo que lo hace una herramienta muy útil para los diseñadores de hardware y los programadores de sistemas embebidos, en otras palabras es el que le permite leer a la tarjeta de desarrollo nuestro código, como ultimo paso, comprobamos con la misma tarjeta.
+
+\section{Resultados esperados}\label{sec:resEsperados}
+
+A continuación se muestran todas las tablas de verdad para cada caso:\\
+\\
+\begin{table}[H]
 	\centering
-	\includegraphics[scale=0.18]{../static/001.jpeg}
-	\caption{001}
-	\label{fig:3}
-\end{figure}
-	
-Ahora se observa en la figura \ref*{fig:3} como esta apagado el led cuando tenemos el mintermino 1 el cual si produce una salida de 1.
+	\begin{tabular}{|c|c|c|}
+		\hline
+		X & Y & OR \\
+		\hline
+		0 & 0 & 0 \\	
+		\hline
+		0 & 1 & 1 \\
+	\hline
+	1 & 0 & 1 \\
+	\hline
+	1 & 1 & 1 \\
+	\hline
+\end{tabular}
+\caption{Tabla de verdad OR}
+\label{table:1}
+\end{table}
 
-\begin{figure}[H]
+\begin{table}[H]
 	\centering
-	\includegraphics[scale=0.18]{../static/011.jpeg}
-	\caption{011}
-	\label{fig:4}
-\end{figure}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		X & Y & AND \\
+		\hline
+		0 & 0 & 0 \\	
+		\hline
+		0 & 1 & 0 \\
+		\hline
+		1 & 0 & 0 \\
+	\hline
+	1 & 1 & 1 \\
+	\hline
+\end{tabular}
+\caption{Tabla de verdad AND}
+\label{table:2}
+\end{table}
 
-\begin{figure}[H]
+\begin{table}[H]
 	\centering
-	\includegraphics[scale=0.18]{../static/100.jpeg}
-	\caption{100}
-	\label{fig:5}
-\end{figure}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		X & Y & NAND \\
+		\hline
+		0 & 0 & 1 \\	
+		\hline
+		0 & 1 & 1 \\
+		\hline
+	1 & 0 & 1 \\
+	\hline
+	1 & 1 & 0 \\
+	\hline
+\end{tabular}
+\caption{Tabla de verdad NAND}
+\label{table:3}
+\end{table}
 
-\begin{figure}[H]
+\begin{table}[H]
 	\centering
-	\includegraphics[scale=0.18]{../static/101.jpeg}
-	\caption{101}
-	\label{fig:6}
-\end{figure}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		X & Y & XOR \\
+		\hline
+		0 & 0 & 0 \\	
+		\hline
+		0 & 1 & 1 \\
+		\hline
+		1 & 0 & 1 \\
+	\hline
+	1 & 1 & 0 \\
+	\hline
+\end{tabular}
+\caption{Tabla de verdad XOR}
+\label{table:4}
+\end{table}
 
-\begin{figure}[H]
+\begin{table}[H]
 	\centering
-	\includegraphics[scale=0.18]{../static/110.jpeg}
-	\caption{110}
-	\label{fig:7}
-\end{figure}
-
-Como se observa en todas las figuras los resultados obtenidos son los mismos que los resultados esperados debido a que construimos el circuito correctamente.
-
-\section*{Conclusiones}\label{Conclusiones}
-Como vemos, la simplificación de las funciones ayuda a que los circuitos sean mejores en todos los aspectos, ya que los simplifican y lo cual lo hace más sencillo de entender, y en general para las empresas y productos es mejor, ya que sus costes de producción se minimizan y los productos pueden ser más pequeños, y todo esto sin modificar el resultado obtenido en la función, sin duda el ver la función estándar y después su versión simplificada vemos que la sencillez hace que todo sea mejor y más óptimo.
-\section*{Referencias}\label{Referencias}	
-Brunete A. (s.f), Mapa de Karnaugh.
-\href{https://bookdown.org/alberto_brunete/intro_automatica/mapa-de-karnaugh.html}{link}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		X & Y & Z & F=X + Y'Z \\
+		\hline
+		0 & 0 & 0 & 0 \\
+		0 & 0 & 1 & 1 \\
+		0 & 1 & 0 & 0 \\
+		0 & 1 & 1 & 0 \\
+		1 & 0 & 0 & 1 \\
+		1 & 0 & 1 & 1 \\
+		1 & 1 & 0 & 1 \\
+		1 & 1 & 1 & 1 \\
+		\hline
+	\end{tabular}
+	\caption{Tabla de verdad de la función F = X + Y'Z}
+	\label{table:5}
+\end{table}
 
 \end{multicols}
+\section{Resultados obtenidos}\label{sec:resObtenidos}
+Nuestro led de la tarjeta tiene que prender en todos los unos.
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		X & Y & OR \\
+		\hline
+		0 & 0 & \includegraphics[width=5cm,height=3cm]{../../static/dis5or00.jpeg} \\	
+		\hline
+		0 & 1 &  \includegraphics[width=5cm,height=3cm]{../../static/dis5or01.jpeg}\\
+	\hline
+	1 & 0 &  \includegraphics[width=5cm,height=3cm]{../../static/dis5or10.jpeg}\\
+	\hline
+	1 & 1 &  \includegraphics[width=5cm,height=3cm]{../../static/dis5or11.jpeg}\\
+	\hline
+\end{tabular}
+\caption{Tabla de verdad OR(evidencia)}
+\label{table:6}
+\end{table}
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		X & Y & AND \\
+		\hline
+		0 & 0 & \includegraphics[width=5cm,height=3cm]{../../static/dis5and00.jpeg} \\	
+		\hline
+		0 & 1 &  \includegraphics[width=5cm,height=3cm]{../../static/dis5and01.jpeg} \\
+	\hline
+	1 & 0 &  \includegraphics[width=5cm,height=3cm]{../../static/dis5and10.jpeg}\\
+	\hline
+	1 & 1 &  \includegraphics[width=5cm,height=3cm]{../../static/dis5and11.jpeg}\\
+	\hline
+\end{tabular}
+\caption{Tabla de verdad AND(evidencia)}
+\label{table:7}
+\end{table}
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		X & Y & NAND \\
+		\hline
+		0 & 0 & \includegraphics[width=5cm,height=3cm]{../../static/dis5nand00.jpeg} \\	
+		\hline
+		0 & 1 & \includegraphics[width=5cm,height=3cm]{../../static/dis5nand01.jpeg} \\
+	\hline
+	1 & 0 &  \includegraphics[width=5cm,height=3cm]{../../static/dis5nand10.jpeg}\\
+	\hline
+	1 & 1 &  \includegraphics[width=5cm,height=3cm]{../../static/dis5nand11.jpeg}\\
+	\hline
+\end{tabular}
+\caption{Tabla de verdad NAND(evidencia)}
+\label{table:8}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		X & Y & XOR \\
+		\hline
+		0 & 0 & \includegraphics[width=5cm,height=3cm]{../../static/dis5xor00.jpeg} \\	
+		\hline
+		0 & 1 &  \includegraphics[width=5cm,height=3cm]{../../static/dis5xor01.jpeg}\\
+	\hline
+	1 & 0 &  \includegraphics[width=5cm,height=3cm]{../../static/dis5xor10.jpeg}\\
+	\hline
+	1 & 1 &  \includegraphics[width=5cm,height=3cm]{../../static/dis5xor11.jpeg}\\
+	\hline
+\end{tabular}
+\caption{Tabla de verdad XOR}
+\label{table:9}
+\end{table}
+
+\begin{table}[H]
+	\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+X & Y & Z & F=X + Y'Z \\
+\hline
+0 & 0 & 0 & \includegraphics[width=5cm,height=2cm]{../../static/dis5f000.jpeg} \\
+0 & 0 & 1 & \includegraphics[width=5cm,height=2cm]{../../static/dis5f001.jpeg} \\
+0 & 1 & 0 &  \includegraphics[width=5cm,height=2cm]{../../static/dis5f010.jpeg}\\
+0 & 1 & 1 &  \includegraphics[width=5cm,height=2cm]{../../static/disf011.jpeg}\\
+1 & 0 & 0 &  \includegraphics[width=5cm,height=2cm]{../../static/disf100.jpeg}\\
+1 & 0 & 1 &  \includegraphics[width=5cm,height=2cm]{../../static/disf101.jpeg}\\
+1 & 1 & 0 &  \includegraphics[width=5cm,height=2cm]{../../static/disf110.jpeg}\\
+1 & 1 & 1 &  \includegraphics[width=5cm,height=2cm]{../../static/disf111.jpeg}\\
+\hline
+\end{tabular}
+\caption{Tabla de verdad de la función F = X + Y'Z}
+\label{table:10}
+\end{table}
+
+\begin{multicols}{2}
+	
+\section{Conclusiones}\label{sec:conclusion}
+Todo esto nos sirvió para comprobar y como se pudo observar el objetivo se cumplió ya que nos quedaron las tablas de manera correcta que el hacer nuestras funciones de compuestas lógicas en la tarjeta de desarrollo es mucho más practico que hacerlo con compuertas físicas, aunque para las funciones realizadas es más laborioso, hay que pensar que hay problemas mas grandes y complejos, que hacerlos manualmente en protoboard no solo seria mas caro, difícil, tardado, ineficiente que hacerlo con la tarjetas de desarrollo, si no que en una escala mayor donde se requiera muchos dispositivos que realicen la misma función, la tarjeta de desarrollo se podría utilizar la misma para todas y solo se copiaría el código que describe lo que tiene que hacer la tarjeta, por lo que es mejor opción.
+\section*{Referencias}\label{sec:referencias}	
+Brunete A. (s.f), Mapa de Karnaugh.
+
+Naylampmechatronics (s.f), \it{Altera mini usb blaster}. \href{https://naylampmechatronics.com/programadores/411-altera-mini-usb-blaster.html}{Naylampmechatronics.com}
+
+\end{multicols}
 \end{document}
 
