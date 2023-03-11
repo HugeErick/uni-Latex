@@ -88,8 +88,72 @@ aceleración y tensión predichos por la teoría. Los resultados de la aceleraci
 \begin{multicols}{2}
 
 \section{Desarrollo teórico}\label{Desarrollo Teorico}                              	% -------------------- Introducción
+Se sabe que el plano inclinado es un sistema donde como su nombre lo dice cuenta con una inclinación y que está conformado por un ángulo agudo el cual determina la elevación del plano.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{../../static/fpra6f5.jpeg}
+	\caption{Representación del sistema de esta práctica}
+	\label{fig:1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{../../static/fpra6f6.jpeg}
+	\caption{Diagrama de cuerpo libre de un automóvil moviéndose en un plano inclinado}
+	\label{fig:2}
+\end{figure}
+
+Para la resolución de problemas de este tipo se suele ser tomar el eje y en la normal al plano inclinado, y el eje x acorde con su superficie de deslizamiento. De esta forma la normal estará totalmente comprendida en el eje y. [1] A su vez se tienen las fuerzas que tienen efecto sobre el cuerpo, que son desarrolladas por sus componentes vectoriales donde: 
+\begin{equation*}
+	F = F_xi + F_yj
+\end{equation*}
+
+\begin{equation*}
+	F_x = \left|F\right|\cos(\theta)
+\end{equation*}
+
+\begin{equation*}
+	F_y = \left|F\right|\sin(\theta)
+\end{equation*}
+
+La segunda ley de Newton indica que la fuerza neta sobre un objeto es la suma vectorial de todas las fuerzas que actúan sobre el objeto [2]. Por lo que:
+
+\begin{equation*}
+	\Sigma F = ma
+\end{equation*}
+
+Siendo que esta ecuación es una expresión vectorial y que por lo tanto es equivalente a las ecuaciones:
+
+\begin{equation*}
+	\Sigma F_x = ma_x
+\end{equation*}
+
+\begin{equation*}
+	\Sigma F_y = ma_y
+\end{equation*}
+
+Cuando un cuerpo se muevo por un plano inclinado con ángulo $\theta$, entonces la aceleración que el cuerpo va adquiriendo es dada como la componente de la gravedad respecto la dirección del plano, siendo la fórmula:Cuando un cuerpo se muevo por un plano inclinado con ángulo $\theta$, entonces la aceleración que el cuerpo va adquiriendo es dada como la componente de la gravedad respecto la dirección del plano, siendo la fórmula:
+
+\begin{equation*}
+	a = g\sin(\theta)
+\end{equation*}
+
+
 
 \section{Desarrollo Experimental}\label{Desarrollo experimental}				% -------------------- Metodología 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{../../static/fpra6f3.png}
+	\label{fig:3}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{../../static/fpra6f4.png}
+	\label{fig:4}
+\end{figure}
+
+
 Materiales:
 \begin{itemize}[label=$-$]
 	\item Riel plano
@@ -105,7 +169,7 @@ Materiales:
 \end{itemize}
 
 Cuidados y consideraciones en práctica
-\begin{itemize}[label=$bullet$]
+\begin{itemize}[label=$*$]
 	\item Asegurarse de que el riel esté bien montado y ajustado a las varillas y prensas para
 que no se caiga
 	\item Colocar pedazos de cartón antes de montar las prensar para evitar dañar la mesa
@@ -255,11 +319,16 @@ a = \frac{-3.592}{0.289}
 \end{equation*}
 
 
-
-
 \section{Conclusiones}\label{Conclusiones}				% -------------------- Conclusiones
 
+Finalmente, al observar la gráfica de los análisis y resultados, se ve que se obtuvo la velocidad del objeto siendo este 53.1 m/s que a su vez contó con una incertidumbre de 8.5, siendo estos valores el valor de m en la ecuación de la recta, por lo que se obtiene que y=(53.1 $\pm$ 8.5)x + 22.3 $\pm$ 29.5. A su vez, se tiene la aceleraciones de los bloques, las cuales fueron en la experimental de 106.2 cm/s mientras que la analítica es de 12.42 m/s, donde se presenta bastante diferencia y se cree debió haber algún error de las máquinas o humano que influyó en los resultados. Terminando, se puede ver que el valor de R2 obtenido fue de 0,96 por lo que se tiene que la cercanía al resultado perfecto es de 96$\%$, siendo el margen de error de tan solo 4$\%$, por lo que se entiende que el experimento terminó saliendo bastante bien.
+
 \begin{thebibliography}{9}						% -------------------- Bibliografía
+	\bibitem{Martín}
+		Martín, I. (2004). Física General
+		\bibitem{Serway}
+		Serway, R. A., $\&$ Jewett, J. W. (2008). Física para ciencias e ingeniería. (7.a
+ed., Vol. 1). CENGAGE Learning.
 
 \bibitem{Pérez}
 	Newton, I. (1687). Philosophiæ Naturalis Principia Mathematica [Mathematical Principles of Natural Philosophy]. Londini: Jussu Societatis Regiæ ac Typis Josephi Streater.
