@@ -1,0 +1,338 @@
+\documentclass{article}
+%\usepackage[spanish,activeacute]{babel}
+%\usepackage[english,activeacute]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{amsmath,amsfonts,amssymb,amstext,amsthm,amscd}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{graphicx}
+%\usepackage{subfigure}
+\usepackage{subfig}
+%\linespread{1.6}
+\usepackage{float}
+\usepackage{dcolumn}% Align table columns on decimal point(esto lo saque del ejemplo de revtex4)
+\usepackage{bm}% bold math(esto lo saque del ejemplo de revtex4)
+\newcounter{itemR}
+\usepackage{here} %recordar usar el comando[H] para las gráficas que es el comando here en lugar de [h!]
+\usepackage{fancyhdr}
+%\usepackage{sidecap}
+%\usepackage[spanish,activeacute]{babel}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{enumitem}
+%\usepackage{booktabs}% para hacer tablas profesionales con \toprule
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\usepackage[paperwidth=8.5in, paperheight=11.0in, top=1.0in, bottom=1.0in, left=1.0in, right=1.0in]{geometry}
+
+\pagestyle{fancyplain}
+\fancyhead[LE,RO]{Práctica $\#$5, 2nda ley de Newton}
+\fancyhead[CE,CO]{}
+\fancyhead[RE,LO]{P23-FIS1012-12}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[CE,CO]{Laboratorio de Física, UDLAP}
+\fancyfoot[RE,LO]{}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+\fancypagestyle{plain}{
+   	\renewcommand{\headrulewidth}{1pt}
+   	\renewcommand{\footrulewidth}{1pt}
+}
+
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\title{Segunda ley de Newton con plano inclinado}
+\author{\small{Luis Alberto Gil Bocanegra ID: 177410, Erick Gonzalez Parada ID: 178145}\\
+ \small{Daniela Hernández García ID: 179051 $\&$ Luis Francisco Avila Romero ID: 177632.}\\		% ----- Varios autores separarlos por comas:  \small{Nombre(s) de (los) autor(es)\footnote{ID; correo@udlap.mx}, Nombre(s) de (los) autor(es)\footnote{ID; correo@udlap.mx}
+	   \small{Depto. de Actuaría, Física y Matemáticas, Universidad de las Américas Puebla, Puebla, M\'exico 72810}}
+\date{\small{\today}}
+
+\maketitle
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{abstract}
+En esta práctica se tuvo como objetivo aplicar la segunda ley de Newton en un
+sistema de plano inclinado sin fricción y un móvil que se mueve por una fuerza externa, de
+igual manera medir la aceleración en el laboratorio y confrontar con los valores de
+aceleración y tensión predichos por la teoría. Los resultados de la aceleración a base de los cálculos nos salio como 12.42m/s cercano al calculo teórico que se puede apreciar en la sección \ref{Resultados} de resultados
+\\
+\\
+{\it Keywords:}  Polea, Plano, Inclinado 
+\\
+\\
+\end{abstract}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{multicols}{2}
+
+\section{Desarrollo teórico}\label{Desarrollo Teorico}                              	% -------------------- Introducción
+Se sabe que el plano inclinado es un sistema donde como su nombre lo dice cuenta con una inclinación y que está conformado por un ángulo agudo el cual determina la elevación del plano.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{../../static/fpra6f5.jpeg}
+	\caption{Representación del sistema de esta práctica}
+	\label{fig:1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{../../static/fpra6f6.jpeg}
+	\caption{Diagrama de cuerpo libre de un automóvil moviéndose en un plano inclinado}
+	\label{fig:2}
+\end{figure}
+
+Para la resolución de problemas de este tipo se suele ser tomar el eje y en la normal al plano inclinado, y el eje x acorde con su superficie de deslizamiento. De esta forma la normal estará totalmente comprendida en el eje y. [1] A su vez se tienen las fuerzas que tienen efecto sobre el cuerpo, que son desarrolladas por sus componentes vectoriales donde: 
+\begin{equation*}
+	F = F_xi + F_yj
+\end{equation*}
+
+\begin{equation*}
+	F_x = \left|F\right|\cos(\theta)
+\end{equation*}
+
+\begin{equation*}
+	F_y = \left|F\right|\sin(\theta)
+\end{equation*}
+
+La segunda ley de Newton indica que la fuerza neta sobre un objeto es la suma vectorial de todas las fuerzas que actúan sobre el objeto [2]. Por lo que:
+
+\begin{equation*}
+	\Sigma F = ma
+\end{equation*}
+
+Siendo que esta ecuación es una expresión vectorial y que por lo tanto es equivalente a las ecuaciones:
+
+\begin{equation*}
+	\Sigma F_x = ma_x
+\end{equation*}
+
+\begin{equation*}
+	\Sigma F_y = ma_y
+\end{equation*}
+
+Cuando un cuerpo se muevo por un plano inclinado con ángulo $\theta$, entonces la aceleración que el cuerpo va adquiriendo es dada como la componente de la gravedad respecto la dirección del plano, siendo la fórmula:Cuando un cuerpo se muevo por un plano inclinado con ángulo $\theta$, entonces la aceleración que el cuerpo va adquiriendo es dada como la componente de la gravedad respecto la dirección del plano, siendo la fórmula:
+
+\begin{equation*}
+	a = g\sin(\theta)
+\end{equation*}
+
+
+
+\section{Desarrollo Experimental}\label{Desarrollo experimental}				% -------------------- Metodología 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{../../static/fpra6f3.png}
+	\label{fig:3}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{../../static/fpra6f4.png}
+	\label{fig:4}
+\end{figure}
+
+
+Materiales:
+\begin{itemize}[label=$-$]
+	\item Riel plano
+	\item Medidor de ángulo 
+	\item Móvil
+	\item Smart Timer
+	\item 2 fotocompuertas
+	\item 2 stopers
+	\item Cuerda
+	\item Pesas con gancho
+	\item 2 varillas
+	\item 2 prensas
+\end{itemize}
+
+Cuidados y consideraciones en práctica
+\begin{itemize}[label=$*$]
+	\item Asegurarse de que el riel esté bien montado y ajustado a las varillas y prensas para
+que no se caiga
+	\item Colocar pedazos de cartón antes de montar las prensar para evitar dañar la mesa
+del laboratorio.
+ \item Tener cuidado con las ruedas del móvil, colocarlo con las ruedas hacia arriba
+mientras no esté colocado en el riel.
+ \item Asegurarse de obtener el ángulo lo más exacto posible con el medidor de ángulo.
+ \item Asegurarse que la cuerda no se desprenda de la polea
+ \item Sujetar las masas del gancho para evitar que al soltarlas se caigan
+ \item Sujetar bien la cuerda al móvil para evitar que se desprenda
+ \item Poner las fotocompuertas a una buena altura para evitar que el móvil choque con
+ellas
+ \item Sujetar el móvil mientras no se realiza ninguna medición.
+	\item Asegurarse de que al conectar las fotocompuertas al smart timer, se enciendan las
+luces color rojo en la parte superior al pasar el móvil.
+\item Todos los elementos que van en el riel se insertan desde la canaleta del riel y se
+ajustan con tornillos
+\end{itemize}
+\subsection{Procedimiento experimental}\label{Procedimiento experimental}
+	\begin{enumerate}
+		\item Montar en el riel plano los stopers, medidor de ángulo y fotocompuertas (se insertan
+en la canaleta del riel).
+		\item Colocar las prensas en la mesa y ajustar las varillas para sujetar el riel.
+		\item Amarrar un extremo de la cuerda al móvil y el otro al gancho con la cantidad de
+masa ya preestablecida en la polea. 
+		\item La fotocompuerta 1 deberá ser por la que pase primero el móvil de manera
+ascendente.
+		\item La fotocompuerta 2 deberá ir cambiando de posición/ medida conforme se avanza
+en la práctica 
+		\item Conectar las fotocompuertas al Smart Timer.
+		\item Se detiene el móvil y se inicia el tiempo en el Smart Timer. 
+		\item Soltar el móvil para asegurar el libre movimiento de éste de manera ascendente y se
+registra el tiempo.
+		\item Repetir el procedimiento anterior 5 mediciones más para 10 distancias distintas 
+	\end{enumerate}
+\end{multicols}
+\section{Resultados y análisis}\label{Resultados}			% -------------------- Resultados
+En la tabla \ref{table:1} se muestran los resultados obtenidos durante la fase experimental, siendo la columna Y la de la distancia, mientras que en el eje X, se encuentra el tiempo promedio que tardó el objeto en recorrer dicha distancia con sus respectivas incertidumbres. Igualmente se encuentra el tiempo al cuadrado. Debajo de dicha tabla, se encuentran las incertidumbres calculadas con los mismos datos obtenidos de la tabla (Sy, Sm, Sb). En este caso, la pendiente (M) que es el mismo valor que el de velocidad, dio un resultado de (53.1 $\pm$ 8.5). 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Distancia(cm) $\pm$ 0.05 & Tiempo(s) & $Tiempo^2$(s) \\
+		\hline
+		25.0 & 0.3471 $\pm$ 0.03 & 0.1204 $\pm$ 0.00003 \\
+		\hline
+		30.0 & 0.4175 $\pm$ 0.05 & 0.1743 $\pm$ 0.00005 \\
+		\hline
+		35.0 & 0.4771 $\pm$ 0.06 & 0.2276 $\pm$ 0.00006 \\
+		\hline
+		40.0 & 0.5433 $\pm$ 0.02 & 0.2951 $\pm$ 0.00002 \\
+		\hline
+		45.0 & 0.5856 $\pm$ 0.05 & 0.3429 $\pm$ 0.00005 \\
+		\hline
+		50.0 & 0.6858 $\pm$ 0.04 & 0.4703 $\pm$ 0.00004 \\
+		\hline
+		55.0 & 0.8326 $\pm$ 0.02 & 0.6932 $\pm$ 0.00002 \\
+		\hline
+		60.0 & 0.8631 $\pm$ 0.05 & 0.7449 $\pm$ 0.00005 \\
+		\hline
+		65.0 & 0.9079 $\pm$ 0.02 & 0.8242 $\pm$ 0.00002 \\
+		\hline
+		70.0 & 0.9143 $\pm$ 0.01 & 0.8359 $\pm$ 0.00001 \\
+		\hline
+	\end{tabular}
+	\caption{Tabla de valores obtenidos en el experimento}
+	\label{table:1}
+\end{table}
+
+En la gráfica \ref{fig:1} se muestran los resultados de la tabla \ref{table:1} graficados para su mejor comprensión, como se puede observar, hay ciertos puntos que se encuentran algo separados de la linea de tendencia, es decir, que poseen un rango de error considerable en comparación con la recta ideal, esto debido a diversos factores que se presentaron al momento de la realización del experimento como pudo haber sido la forma en qué se lanzó el móvil, la fuerza implicada en el lanzamiento o alguna anomalía en la superficie que recorre el móvil. De igual forma, se puede observar la ecuación de la recta en la esquina superior izquierda, siendo esta y=(53.1 $\pm$ 8.5)x + 22.3 $\pm$ 29.5, junto con el valor R2, siendo este \emph{R2 = 0.96 }significando que la toma de medidas fue bastante buena, con un margen de error de 0.04. La aceleración del objeto durante su movimiento, que en este caso es el doble de la velocidad, es de 106.2 m/s. Por último, como se puede apreciar, la distancia es proporcional al tiempo, ya que, conforme va aumentando la distancia que recorre el móvil, el tiempo que este tarda en recorrerla aumenta proporcionalmente.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1.2]{../../static/fpra6f1.jpeg}	
+	\caption{Representación visual de las tablas de valores}
+	\label{fig:1}
+\end{figure}
+
+Después tenemos los cálculos realizados analíticamente para obtener la aceleración de los bloques, comparándolas se puede observar que existe una gran diferencia entre ellas, siendo la experimental de 106.2cm/s, mientras que la analítica es de 12.42 m/s, la gran diferencia entre ellas puede ser debido a diversos factores que interfirieron al momento de la realización del experimento, ya sea la distancia a la que fue lanzada, algún tipo de fuerza externa que haya influido en la aceleración del mismo.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.9]{../../static/fpra6f2.png}
+	\caption{Diagrama de cuerpo libre}
+	\label{fig:2}
+\end{figure}
+
+\begin{multicols}{2}
+
+\begin{equation*}
+	N = W 
+\end{equation*}
+
+
+\begin{equation*}
+	t - W = ma	
+\end{equation*}
+%-------------
+\begin{equation*}
+	t = ma + W
+\end{equation*}
+
+\begin{equation*}
+t = ma + mg * cos(250^\circ)
+\end{equation*}
+
+\begin{equation*}
+t = -607 + (-0.67)
+\end{equation*}
+
+\begin{equation*}
+t= -6.74
+\end{equation*}
+
+\begin{equation*}
+W = 0.200kg * (-9.81)
+\end{equation*}
+
+\begin{equation*}
+W = -1.962 
+\end{equation*}
+
+Calculando aceleración
+\begin{equation*}
+	m_1 * a + W_1 = m_2 * a - W_2
+\end{equation*}
+
+\begin{equation*}
+	m_1 * a - m_2 * a = -W_2 - W_1
+\end{equation*}
+
+\begin{equation*}
+	a * (m_1 - m_2) = -W_2 - W_1
+\end{equation*}
+
+\begin{equation*}
+	a = \frac{-W_2 - W_1}{m_1 - m_2}
+\end{equation*}
+
+\begin{equation*}
+a = \frac{-3.592}{0.289}
+\end{equation*}
+
+\begin{equation*}
+	a = -12.42
+\end{equation*}
+
+
+\section{Conclusiones}\label{Conclusiones}				% -------------------- Conclusiones
+
+Finalmente, al observar la gráfica de los análisis y resultados, se ve que se obtuvo la velocidad del objeto siendo este 53.1 m/s que a su vez contó con una incertidumbre de 8.5, siendo estos valores el valor de m en la ecuación de la recta, por lo que se obtiene que y=(53.1 $\pm$ 8.5)x + 22.3 $\pm$ 29.5. A su vez, se tiene la aceleraciones de los bloques, las cuales fueron en la experimental de 106.2 cm/s mientras que la analítica es de 12.42 m/s, donde se presenta bastante diferencia y se cree debió haber algún error de las máquinas o humano que influyó en los resultados. Terminando, se puede ver que el valor de R2 obtenido fue de 0,96 por lo que se tiene que la cercanía al resultado perfecto es de 96$\%$, siendo el margen de error de tan solo 4$\%$, por lo que se entiende que el experimento terminó saliendo bastante bien.
+
+\begin{thebibliography}{9}						% -------------------- Bibliografía
+	\bibitem{Martín}
+		Martín, I. (2004). Física General
+		\bibitem{Serway}
+		Serway, R. A., $\&$ Jewett, J. W. (2008). Física para ciencias e ingeniería. (7.a
+ed., Vol. 1). CENGAGE Learning.
+
+\bibitem{Pérez}
+	Newton, I. (1687). Philosophiæ Naturalis Principia Mathematica [Mathematical Principles of Natural Philosophy]. Londini: Jussu Societatis Regiæ ac Typis Josephi Streater.
+\end{thebibliography}
+\end{multicols}
+
+\end{document}	
