@@ -1,0 +1,293 @@
+\documentclass{article}
+%\usepackage[spanish,activeacute]{babel}
+%\usepackage[english,activeacute]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{amsmath,amsfonts,amssymb,amstext,amsthm,amscd}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{graphicx}
+%\usepackage{subfigure}
+\usepackage{subfig}
+%\linespread{1.6}
+\usepackage{float}
+\usepackage{dcolumn}% Align table columns on decimal point(esto lo saque del ejemplo de revtex4)
+\usepackage{bm}% bold math(esto lo saque del ejemplo de revtex4)
+\newcounter{itemR}
+\usepackage{here} %recordar usar el comando[H] para las gráficas que es el comando here en lugar de [h!]
+\usepackage{fancyhdr}
+%\usepackage{sidecap}
+%\usepackage[spanish,activeacute]{babel}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{enumitem}
+%\usepackage{booktabs}% para hacer tablas profesionales con \toprule
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\usepackage[paperwidth=8.5in, paperheight=11.0in, top=1.0in, bottom=1.0in, left=1.0in, right=1.0in]{geometry}
+
+\pagestyle{fancyplain}
+\fancyhead[LE,RO]{Práctica $\#$7, Tiro parabólico}
+\fancyhead[CE,CO]{}
+\fancyhead[RE,LO]{P23-FIS1012-12}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[CE,CO]{Laboratorio de Física, UDLAP}
+\fancyfoot[RE,LO]{}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+\fancypagestyle{plain}{
+   	\renewcommand{\headrulewidth}{1pt}
+   	\renewcommand{\footrulewidth}{1pt}
+}
+
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\title{Tiro parabólico}
+\author{\small{Luis Alberto Gil Bocanegra ID: 177410, Erick Gonzalez Parada ID: 178145}\\
+ \small{Daniela Hernández García ID: 179051 $\&$ Luis Francisco Avila Romero ID: 177632.}\\		% ----- Varios autores separarlos por comas:  \small{Nombre(s) de (los) autor(es)\footnote{ID; correo@udlap.mx}, Nombre(s) de (los) autor(es)\footnote{ID; correo@udlap.mx}
+	   \small{Depto. de Actuaría, Física y Matemáticas, Universidad de las Américas Puebla, Puebla, M\'exico 72810}}
+\date{\small{\today}}
+
+\maketitle
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{abstract}
+Esta práctica consistió en tiro parabólico. Se analizó el movimiento de un cuerpo en dos
+dimensiones separando el movimiento rectilíneo uniforme y el movimiento uniformemente
+acelerado que aparecen de manera natural en su trayectoria.
+\\
+\\
+{\it Keywords:}  Tiro, Parabólico, Cañón 
+\\
+\\
+\end{abstract}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{multicols}{2}
+
+\section{Desarrollo teórico}\label{Desarrollo Teorico}                              	% -------------------- Introducción
+
+El tiro parabólico es un tipo de movimiento que describe la trayectoria de un objeto que se mueve en dos dimensiones bajo la influencia de la gravedad. Se llama parabólico porque la forma de la trayectoria del objeto es una parábola.
+
+Para entender mejor el tiro parabólico, podemos dividirlo en dos componentes: la componente horizontal y la componente vertical. La componente horizontal es la velocidad constante del objeto en dirección horizontal, mientras que la componente vertical es la aceleración debida a la gravedad en dirección vertical. La velocidad inicial del objeto tiene una componente horizontal y una componente vertical.
+
+La ecuación de movimiento para el tiro parabólico se puede expresar matemáticamente de la siguiente manera:
+
+La componente horizontal:
+\begin{equation}
+x = x_0 + v_{0x} t
+\end{equation}
+
+La componente vertical:
+\begin{equation}
+y = y_0 + v_{0y} t + \frac{1}{2} g t^2
+\end{equation}
+
+Donde:
+\begin{itemize}
+\item $x$ es la posición horizontal del objeto en un momento dado.
+\item $x_0$ es la posición horizontal inicial del objeto.
+\item $v_{0x}$ es la velocidad horizontal inicial del objeto.
+\item $t$ es el tiempo transcurrido desde el inicio del movimiento.
+\item $y$ es la posición vertical del objeto en un momento dado.
+\item $y_0$ es la posición vertical inicial del objeto.
+\item $v_{0y}$ es la velocidad vertical inicial del objeto.
+\item $g$ es la aceleración debida a la gravedad (aproximadamente 9.8 m/s$^2$).
+\end{itemize}
+
+La velocidad inicial del objeto se puede descomponer en sus componentes horizontal y vertical de la siguiente manera:
+
+\begin{align}
+v_{0x} &= v_0 \cos(\theta) \
+v_{0y} &= v_0 \sin(\theta)
+\end{align}
+
+Donde:
+\begin{itemize}
+\item $v_0$ es la magnitud de la velocidad inicial del objeto.
+\item $\theta$ es el ángulo de lanzamiento de la velocidad inicial del objeto con respecto a la horizontal.
+\end{itemize}
+
+La altura máxima alcanzada por el objeto se puede encontrar igualando la velocidad vertical inicial a cero y resolviendo para $t$:
+
+\begin{equation}
+t_{\text{max}} = \frac{v_{0y}}{g}
+\end{equation}
+
+Sustituyendo este valor de $t_{\text{max}}$ en la ecuación de movimiento vertical, podemos encontrar la altura máxima:
+
+\begin{equation}
+y_{\text{max}} = y_0 + \frac{v_{0y}^2}{2g}
+\end{equation}
+
+El alcance máximo del objeto se puede encontrar igualando la altura a cero y resolviendo para $t$:
+
+\begin{equation}
+t_{\text{alcance}} = \frac{2v_0 \sin(\theta)}{g}
+\end{equation}
+
+Sustituyendo este valor de $t_{\text{alcance}}$ en la ecuación de movimiento horizontal, podemos encontrar el alcance máximo:
+
+\begin{equation}
+x_{\text{alcance}} = x_0 + \frac{v_0^2 \sin(2\theta)}{g}
+\end{equation}
+
+\section{Desarrollo Experimental}\label{Desarrollo experimental}				% -------------------- Metodología 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{../../static/ldf1.png}
+	\caption{sistema montado para experimento}
+	\label{fig:1}
+\end{figure}
+Parte 1: Medición de velocidad inicial a partir del alcance máximo y ángulo de salida
+Calibración del sistema:
+\begin{itemize}[label=$*$]
+ \item Colocar un proyectil o cañón sobre el piso y colocar a un ángulo de 0º
+ \item Colocar ambas fotocompuertas en el soporte como se muestra en la figura \ref{fig:1}, a la salida de la pelota, conectar estas
+al Smart Timer y poner la medición en Time: Two Gates. No olvidar medir la distancia
+entre los dos sensores de las fotocompuertas.
+ \item Introducir una pelota con la ayuda del cargador en el alcance más corto y estimar el
+punto donde esta tocará el piso.
+ \item Colocar una hoja blanca con un papel carbón encima en el punto estimado donde la
+pelota caerá.
+\item Hacer el experimento en un espacio abierto.
+\end{itemize}
+
+Consideraciones generales
+\begin{itemize}[label=$*$]
+	\item Asegurarse que el seguro del cañón esté accionado para evitar que la pelota salga
+disparada mientras no se realiza el experimento.
+	\item Evitar disparar el cañón cuando haya personas cerca o en dirección a ventanas,
+lámparas o elementos externos.
+\item Asegurarse que la pelota active ambas fotocompuertas al ser disparada.
+\item Dirigir el cañón hacia el papel de carbón para que esta caiga en el.
+\end{itemize}
+
+\subsection{Procedimiento experimental}\label{Procedimiento experimental} %subsection
+\begin{itemize}[label=$*$]
+	\item Lanzar la pelota a 0º de inclinación del cañón y alcance más corto. Medir el alcance
+con una cinta métrica, justo en el punto de impacto que se debió marcar en la hoja
+blanca con ayuda del papel carbón.
+\item Repetir 3 veces para cada ángulo y realizar 8 ángulos distintos
+\item Cambiar el alcance del cañón a medio y repetir los puntos anteriores. Por último
+repetir a máximo alcance del cañón.
+
+\end{itemize}
+
+\end{multicols}
+\section{Resultados y análisis}\label{Resultados}			% -------------------- Resultados
+\subsection*{corto alcance}
+En la tabla 1, presentada en la parte de abajo, se muestran los resultados obtenidos durante la fase experimental, siendo la columna Y la de la distancia, mientras que el eje X, se refiere al calculo del seno del doble valor del ángulo al que fue lanzado el proyectil inicialmente. Debajo de dicha tabla, se encuentran las incertidumbres calculadas con los mismos datos obtenidos de la tabla (Sy, Sm, Sb). En este caso, la pendiente (M) que es el mismo valor que el de velocidad, dio un resultado de (2.8 $\pm$ 94.9).
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$\theta$ & Distancia(cm) $\pm$ 0.05 & 2$\theta$ & $\sin$(2$\theta$)\\
+		\hline	
+		15.0 & 116.0 & 30 & -0.988031624 \\
+		\hline
+20.0 & 137.3 & 40 &  0.74511316 \\
+		\hline
+25.0 & 139.0 & 50 & -0.262374854 \\
+		\hline
+30.0 & 151.0 & 60 & -0.304810621 \\
+		\hline
+35.0 & 168.0 & 70 & 0.773890682 \\
+		\hline
+40.0 & 169.3 & 80 & -0.993888654 \\
+		\hline
+45.0 & 165.3 & 90 & 0.893996664 \\
+		\hline
+50.0 & 157.3 & 100 & -0.506365641 \\
+		\hline
+	\end{tabular}
+	\caption{tabla de valores del tiro a corto alcance}
+	\label{table:1}
+\end{table}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.7]{../../static/ldf2.png}
+	\caption{Representación visual de la tabla de valores de corto alcance}
+	\label{fig:2}
+\end{figure}
+
+En la gráfica de la figura \ref{fig:2}, mostrada en la parte inferior, se muestran los resultados de la tabla graficados para su mejor compresión, como se puede observar, hay ciertos puntos que se encuentran algo separados de la linea de tendencia, es decir, que poseen un rango de error considerable en comparación con la recta ideal, esto debido a diversos factores que se presentaron al momento de la realización del experimento como pudo haber sido la forma en qué se lanzó el proyectil, la fuerza implicada en el lanzamiento, el viento que había el día de la realización del experimento o como fue acomodado el proyectil para ser lanzado. Y es debido a estas razones, que el R2 de nuestro experimento fue de 0.09, resultando en una medición bastante mala y muy poco confiable, ya que deja un margen de error del 91$\%$, y esto se ve reflejado en la gráfica, ya que la mayoría de los puntos que hay alrededor de la linea de tendencia se encuentran alejados de la misma. Igualmente se puede apreciar la ecuación de la recta y = (2.8 $\pm$ 94.9)x + 120.9 $\pm$ 145.9., siendo la pendiente el mismo valor que el de la velocidad inicial, es decir, (2.8 $\pm$ 94.9)x.
+\subsection*{mediano alcance}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$\theta$ & Distancia(cm) $\pm$ 0.05 & 2$\theta$ & $\sin$(2$\theta$)\\
+		\hline	
+		15.0 & 271.3 & 30 & -0.988031624 \\
+		\hline
+20.0 & 286.6 & 40 &  0.74511316 \\
+		\hline
+25.0 & 295.0 & 50 & -0.262374854 \\
+		\hline
+30.0 & 304.4 & 60 & -0.304810621 \\
+		\hline
+35.0 & 344.3 & 70 & 0.773890682 \\
+		\hline
+40.0 & 351.2 & 80 & -0.993888654 \\
+		\hline
+45.0 & 357.9 & 90 & 0.893996664 \\
+		\hline
+50.0 & 304.4 & 100 & -0.506365641 \\
+		\hline
+	\end{tabular}
+	\caption{tabla de valores del tiro a mediano alcance}
+	\label{table:2}
+\end{table}
+
+En la tabla \ref{table:2}, presentada en la parte de abajo, se muestran los resultados obtenidos durante la fase experimental, siendo la columna Y la de la distancia, mientras que el eje X, se refiere al calculo del seno del doble valor del ángulo al que fue lanzado el proyectil inicialmente. Debajo de dicha tabla, se encuentran las incertidumbres calculadas con los mismos datos obtenidos de la tabla (Sy, Sm, Sb). En este caso, la pendiente (M) que es el mismo valor que el de velocidad, dio un resultado de (4.6 $\pm$ 225.2).
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.7]{../../static/ldf3.png}
+	\caption{Representación visual de la tabla de valores de mediano alcance}
+	\label{fig:3}
+\end{figure}
+
+En la gráfica de la figura \ref{fig:3}, se muestran los resultados de la tabla graficados para su mejor compresión, como se puede observar, hay ciertos puntos que se encuentran algo separados de la linea de tendencia, es decir, que poseen un rango de error considerable en comparación con la recta ideal, esto debido a diversos factores que se presentaron al momento de la realización del experimento como pudo haber sido la forma en qué se lanzó el proyectil, la fuerza implicada en el lanzamiento, el viento que había el día de la realización del experimento o como fue acomodado el proyectil para ser lanzado. Y es debido a estas razones, que el R2 de nuestro experimento fue de 0.11, resultando en una medición bastante mala y muy poco confiable, ya que deja un margen de error del 89$\%$, y esto se ve reflejado en la gráfica, ya que la mayoría de los puntos que hay alrededor de la linea de tendencia se encuentran alejados de la misma. Igualmente se puede apreciar la ecuación de la recta y = (4.6 $\pm$ 225.2)x + 251.8 $\pm$ 146.5 siendo la pendiente el mismo valor que el de la velocidad inicial, es decir, (4.6 $\pm$ 225.2)x.
+
+\section{Conclusiones}\label{Conclusiones}				% -------------------- Conclusiones
+
+En conclusión, aunque técnicamente se cumplió el objetivo del experimento, los resultados obtenidos fueron muy variados y poco precisos debido a diversos factores que afectaron el lanzamiento del proyectil. Estos factores incluyen errores humanos en la forma en que se lanzó el proyectil, la fuerza implicada en el lanzamiento, el viento presente durante la realización del experimento, así como la forma en que se acomodó el proyectil para su lanzamiento. Como resultado, el coeficiente de determinación (R2) obtenido en el experimento fue de solo 0.09, lo que indica una medición mala y poco confiable con un margen de error del 91$\%$. Esto se ve reflejado en la gráfica de los resultados, donde se observa que la mayoría de los puntos están alejados de la línea de tendencia. Por último, la ecuación de la recta obtenida, $y = (2.8 \pm 94.9)x + (120.9 \pm 145.9)$, muestra que la pendiente es igual al valor de la velocidad inicial, pero con un gran margen de error debido a los factores mencionados anteriormente y de igual forma estos afectaron a la etapa de medio alcance.
+
+\begin{thebibliography}{9}						% -------------------- Bibliografía
+	\bibitem{Martín}
+		Martín, I. (2004). Física General
+		\bibitem{Serway}
+		Serway, R. A., $\&$ Jewett, J. W. (2008). Física para ciencias e ingeniería. (7.a
+ed., Vol. 1). CENGAGE Learning.
+
+\bibitem{Pérez}
+	Newton, I. (1687). Philosophiæ Naturalis Principia Mathematica [Mathematical Principles of Natural Philosophy]. Londini: Jussu Societatis Regiæ ac Typis Josephi Streater.
+\end{thebibliography}
+%\end{multicols}
+
+\end{document}	
