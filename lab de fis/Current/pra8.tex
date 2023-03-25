@@ -1,0 +1,255 @@
+\documentclass{article}
+%\usepackage[spanish,activeacute]{babel}
+%\usepackage[english,activeacute]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{amsmath,amsfonts,amssymb,amstext,amsthm,amscd}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{graphicx}
+%\usepackage{subfigure}
+\usepackage{subfig}
+%\linespread{1.6}
+\usepackage{float}
+\usepackage{dcolumn}% Align table columns on decimal point(esto lo saque del ejemplo de revtex4)
+\usepackage{bm}% bold math(esto lo saque del ejemplo de revtex4)
+\newcounter{itemR}
+\usepackage{here} %recordar usar el comando[H] para las gráficas que es el comando here en lugar de [h!]
+\usepackage{fancyhdr}
+%\usepackage{sidecap}
+%\usepackage[spanish,activeacute]{babel}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{enumitem}
+%\usepackage{booktabs}% para hacer tablas profesionales con \toprule
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\usepackage[paperwidth=8.5in, paperheight=11.0in, top=1.0in, bottom=1.0in, left=1.0in, right=1.0in]{geometry}
+
+\pagestyle{fancyplain}
+\fancyhead[LE,RO]{Práctica $\#$8, fricción}
+\fancyhead[CE,CO]{}
+\fancyhead[RE,LO]{P23-FIS1012-12}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[CE,CO]{Laboratorio de Física, UDLAP}
+\fancyfoot[RE,LO]{}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+\fancypagestyle{plain}{
+   	\renewcommand{\headrulewidth}{1pt}
+   	\renewcommand{\footrulewidth}{1pt}
+}
+
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\title{Fricción}
+\author{\small{Luis Alberto Gil Bocanegra ID: 177410, Erick Gonzalez Parada ID: 178145}\\
+ \small{Daniela Hernández García ID: 179051 $\&$ Luis Francisco Avila Romero ID: 177632.}\\		% ----- Varios autores separarlos por comas:  \small{Nombre(s) de (los) autor(es)\footnote{ID; correo@udlap.mx}, Nombre(s) de (los) autor(es)\footnote{ID; correo@udlap.mx}
+	   \small{Depto. de Actuaría, Física y Matemáticas, Universidad de las Américas Puebla, Puebla, M\'exico 72810}}
+\date{\small{\today}}
+
+\maketitle
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{abstract}
+En esta práctica se analizaron e investigaron dos diferentes tipos de fuerza como la fricción
+estática y la fricción cinética, ambas de diferentes superficies en función del área de
+contacto, la cual en este caso era la mesa; el material como madera y velcro; y su peso en
+diferentes masas. Los resultados fueron muy cercanos a lo análogo como se puede apreciar mejor en la parte de resultados y análisis. 
+\\
+\\
+{\it Keywords:}  fricción, estático  
+\\
+\\
+\end{abstract}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{multicols}{2}
+
+\section{Desarrollo teórico}\label{Desarrollo Teorico}                              	% -------------------- Introducción
+Nuestro objetivo fue analizar de cerca el comportamiento de la fricción en el caso de la fricción cinética y estática.
+\\
+\\
+La fricción es una fuerza resistiva que se opone al movimiento relativo de dos superficies en contacto. Esta fuerza se puede dividir en dos tipos: fricción estática y fricción cinética.
+
+La fricción estática se produce cuando los dos objetos en contacto no se mueven entre sí, y la fuerza necesaria para moverlos es mayor que la fuerza de fricción estática máxima. La fricción estática se puede calcular mediante la ecuación:
+
+\begin{equation}
+f_{e} \leq f_{s,max} = \mu_s N
+\end{equation}
+
+donde $f_{e}$ es la fuerza externa aplicada, $f_{s,max}$ es la fuerza de fricción estática máxima, $\mu_s$ es el coeficiente de fricción estática entre las dos superficies en contacto, y $N$ es la fuerza normal perpendicular a las superficies en contacto.
+
+La fricción cinética se produce cuando los dos objetos en contacto se mueven entre sí, y la fuerza necesaria para mantener el movimiento constante es igual a la fuerza de fricción cinética. La fricción cinética se puede calcular mediante la ecuación:
+
+\begin{equation}
+f_{k} = \mu_k N
+\end{equation}
+
+donde $f_{k}$ es la fuerza de fricción cinética, $\mu_k$ es el coeficiente de fricción cinética entre las dos superficies en contacto, y $N$ es la fuerza normal perpendicular a las superficies en contacto.
+
+Es importante destacar que tanto el coeficiente de fricción estática como el coeficiente de fricción cinética dependen de las propiedades de las superficies en contacto, como la rugosidad, la dureza, la temperatura y la presión. Además, estos coeficientes son diferentes para diferentes pares de materiales en contacto.
+
+En resumen, la fricción es una fuerza resistiva que se opone al movimiento relativo de dos superficies en contacto. La fricción estática se produce cuando los dos objetos en contacto no se mueven entre sí, y la fricción cinética se produce cuando los dos objetos en contacto se mueven entre sí. Ambos tipos de fricción se pueden calcular mediante ecuaciones que dependen de los coeficientes de fricción estática y cinética, respectivamente, entre las dos superficies en contacto.
+
+\section{Desarrollo Experimental}\label{Desarrollo experimental}				% -------------------- Metodología 
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.7]{../../static/lf1.jpg}	
+		\caption{Montaje del dinamómetro y el bloque}
+		\label{fig:1}
+	\end{figure}
+
+	\begin{itemize}
+\item Desarrollo Experimental:
+\begin{itemize}
+\item Parte 1: Medición de fuerza de fricción en función del material y área de superficie de contacto.
+\begin{enumerate}
+\item Calibración del sistema (como en la figura \ref{fig:1}):
+\begin{itemize}
+\item Colocar un bloque de madera con la superficie de madera de mayor área sobre la mesa lisa y limpia.
+\item Ajustar el cero del dinamómetro y enganchar a la amella del bloque de madera.
+\end{itemize}
+\item Procedimiento experimental:
+\begin{itemize}
+\item Jalar el bloque con el dinamómetro lentamente hasta que comience el movimiento.
+\item Anotar la fuerza de fricción estática.
+\item Jalar el bloque con el dinamómetro hasta que el movimiento del bloque sea constante.
+\item Anotar la fuerza de fricción cinética.
+\item Repetir los pasos anteriores para las 4 superficies del bloque.
+\end{itemize}
+\end{enumerate}
+\item Parte 2: Medición de fuerza de fricción en función del peso.
+\begin{enumerate}
+\item Calibración del sistema:
+\begin{itemize}
+\item Montar el mismo sistema de la parte 1.
+\item Escoger solo una de las superficies del bloque.
+\end{itemize}
+\item Procedimiento experimental:
+\begin{itemize}
+\item Jalar el bloque con el dinamómetro lentamente hasta que comience el movimiento.
+\item Anotar la fricción estática.
+\item Colocar peso sobre el bloque y repetir el paso anterior. Realizar para pesos diferentes.
+\item Jalar el bloque con el dinamómetro hasta que el movimiento del bloque sea constante.
+\item Anotar la fuerza de fricción cinética.
+\item Colocar peso sobre el bloque y repetir el paso anterior. Realizar para pesos diferentes.
+\end{itemize}
+\end{enumerate}
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\item Consideraciones generales:
+\begin{itemize}
+\item Asegurarse que el dinamómetro esté ajustado en cero y que tenga la mínima escala necesaria para detectar la fuerza de fricción.
+\item Recordar medir las áreas de las superficie para realizar la comparación adecuada.
+\item Asegurarse que al jalar el dinamómetro este esté completamente vertical para no alterar la medición.
+\item Medir y pesar el bloque para la práctica.
+\end{itemize}
+\end{itemize}
+
+\end{multicols}
+\section{Resultados y análisis}\label{Resultados}			% -------------------- Resultados
+
+\begin{table}[H]
+	\centering	
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		material & área(m) & fricc. estática (N) $\pm$ 0.05 & fricc. dina (N) $\pm$ 0.05 \\  	
+		\hline
+		velcro & 0.003432 $\pm$ 0.81 & 0.30 & 0.30 \\
+		\hline
+		velcro & 0.006864 $\pm$ 0.96 & 0.40 & 0.30 \\
+		\hline
+		madera & 0.003432 $\pm$ 0.81 & 0.40 & 0.20 \\
+		\hline
+		madera & 0.006864 $\pm$ 0.96 & 0.30 & 0.20 \\
+		\hline
+	\end{tabular}
+	\caption{tabla de valores experimentales sin peso}
+	\label{tab:1}
+\end{table}
+
+En la tabla \ref{tab:1}, se muestra una tabla de valores que representan las mediciones experimentales realizadas en el laboratorio, en este caso se muestran las mediciones realizadas al objeto sin haberle añadido un peso extra, como podemos observar, los coeficientes de fricción estática son muy similares entre sí, esto es debido a los materiales de los que estaba hecho el móvil y del área que este mismo posee, en el caso del velcro, el FS cambio debido al incremento en el área del mismo, mientras que en la madera, el FS disminuyó al momento del cambio de área, por lo que se puede afirmar que influye más el material del que este hecho el mismo objeto que del área que este tenga.
+
+\begin{table}[H]
+	\centering	
+	\begin{tabular}{|c|c|c|}
+		\hline
+		W (N) $\pm$ 0.49 & fricc. estática (N) $\pm$ 0.05 & fricc. dina (N) $\pm$ 0.05 \\  	
+		\hline
+		1873.7 & 0.40 & 0.40 \\
+		\hline
+		2324.9 & 0.60 & 0.50 \\
+		\hline
+		3315.7 & 1.00 & 0.60 \\
+		\hline
+		2805.6 & 0.80 & 0.50 \\
+		\hline
+		4306.5 & 1.10 & 0.70 \\
+		\hline
+		4787.2 & 1.00 & 0.80 \\
+		\hline
+	\end{tabular}
+	\caption{tabla de valores experimentales con peso}
+	\label{tab:2}
+\end{table}
+
+En la tabla \ref{tab:2}, se muestra una tabla de valores que representan las mediciones experimentales realizadas en el laboratorio, es este caso se muestran las mediciones realizadas al objeto al haberle puesto peso extra encima de este, como se puede observar, el peso añadido al objeto fue incrementando, así como los coeficientes de fricción de este, ya que se requiere de más fuerza para evitar que el objeto comience el movimiento o siga haciendo este. De igual forma, se puede observar que los coeficientes de fricción más altos son los estáticos, esto debido a que se requiere de más fuerza para comenzar el movimiento que para detenerlo. 
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.8]{../../static/lf2.jpg}	
+		\caption{Representación gráfica de la fricción estática}
+		\label{fig:2}
+	\end{figure}
+
+En la gráfica de la figura \ref{fig:2}, se pueden observar una parte de los datos representados en la tabla mostrada en la ilustración 2, en el eje Y se encuentra la fricción estática (FS), mientras que en el eje X se encuentra el peso del objeto. Se puede apreciar que al trazar la línea de tendencia, que es a como debería de estar ilustrada la trayectoria de las medidas realizadas, la mayoría de los puntos se encuentras desfazados de la misma, es decir, que poseen un margen de error en comparación con la tendencia ideal de la recta, por lo que esto da como resultado un R2 de 0.79, es decir, una efectividad del 79$\%$, siendo una medición moderada, a la cual pudo haber influido diversos factores al momento de medirlo, como la fuerza que fue empleada para moverlo no fue la misma en todos los casos, la superficie por la que fue arrastrada no se encontraba igual en todos los aspectos, algún error en la medición del dinamómetro, etc. El valor del coeficiente de fricción estático dio como resultado (3731.7 $\pm$ 1954.3) x + 188.1 $\pm$ 3471794.1, siendo el coeficiente de fricción el mismo valor que el de la pendiente.
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.8]{../../static/lf3.jpg}	
+		\caption{Representación gráfica de la fricción cinética}
+		\label{fig:3}
+	\end{figure}
+
+En la gráfica de la figura \ref{fig:3}, se pueden observar una parte de los datos representados en la tabla \ref{tab:2}, en el eje Y se encuentra la fricción cinética (FK), mientras que en el eje X se encuentra el peso del objeto. Se puede apreciar que, al trazar la línea de tendencia, que es a cómo debería de estar ilustrada la trayectoria de las medidas realizadas, la mayoría de los puntos se encuentran alineados a la misma, con un margen de error bastante pequeño, dando como resultado un R2 de 0.97, que se traduce en un 97$\%$ de efectividad en la medición realizada, siendo bastante buena y se puede dar constancia que los datos obtenidos de dicha medición son confiables. El valor de la pendiente en este caso es de (7604.9 $\pm$ 3982.8) x + 1200.6 $\pm$ 70750020.2, que es el mismo que el de fricción cinética.
+
+\section{Conclusiones}\label{Conclusiones}				% -------------------- Conclusiones
+Se cumplió el objetivo ya que analizamos la fricción en estos dos casos (cinética y estática) y donde como mencionado en los resultados pudimos apreciar que el estático es un numero ligeramente mayor 
+que nos representa la dificultad de mover un objeto que esta en reposo.  
+
+\begin{thebibliography}{9}						% -------------------- Bibliografía
+	\bibitem{Martín}
+		Martín, I. (2004). Física General
+		\bibitem{Serway}
+		Serway, R. A., $\&$ Jewett, J. W. (2008). Física para ciencias e ingeniería. (7.a
+ed., Vol. 1). CENGAGE Learning.
+
+\bibitem{Pérez}
+	Newton, I. (1687). Philosophiæ Naturalis Principia Mathematica [Mathematical Principles of Natural Philosophy]. Londini: Jussu Societatis Regiæ ac Typis Josephi Streater.
+\end{thebibliography}
+
+\end{document}	
