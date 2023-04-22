@@ -1,0 +1,208 @@
+\documentclass{article}
+%\usepackage[spanish,activeacute]{babel}
+%\usepackage[english,activeacute]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{amsmath,amsfonts,amssymb,amstext,amsthm,amscd}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{graphicx}
+%\usepackage{subfigure}
+\usepackage{subfig}
+%\linespread{1.6}
+\usepackage{float}
+\usepackage{dcolumn}% Align table columns on decimal point(esto lo saque del ejemplo de revtex4)
+\usepackage{bm}% bold math(esto lo saque del ejemplo de revtex4)
+\newcounter{itemR}
+\usepackage{here} %recordar usar el comando[H] para las gráficas que es el comando here en lugar de [h!]
+\usepackage{fancyhdr}
+%\usepackage{sidecap}
+%\usepackage[spanish,activeacute]{babel}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{enumitem}
+%\usepackage{booktabs}% para hacer tablas profesionales con \toprule
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\usepackage[paperwidth=8.5in, paperheight=11.0in, top=1.0in, bottom=1.0in, left=1.0in, right=1.0in]{geometry}
+
+\pagestyle{fancyplain}
+\fancyhead[LE,RO]{Práctica $\#$10, trabajo}
+\fancyhead[CE,CO]{}
+\fancyhead[RE,LO]{P23-FIS1012-12}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[CE,CO]{Laboratorio de Física, UDLAP}
+\fancyfoot[RE,LO]{}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+\fancypagestyle{plain}{
+   	\renewcommand{\headrulewidth}{1pt}
+   	\renewcommand{\footrulewidth}{1pt}
+}
+
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\title{Colisiones elásticas}
+\author{\small{Luis Alberto Gil Bocanegra ID: 177410, Erick Gonzalez Parada ID: 178145}\\
+ \small{Daniela Hernández García ID: 179051 $\&$ Luis Francisco Avila Romero ID: 177632.}\\		% ----- Varios autores separarlos por comas:  \small{Nombre(s) de (los) autor(es)\footnote{ID; correo@udlap.mx}, Nombre(s) de (los) autor(es)\footnote{ID; correo@udlap.mx}
+	   \small{Depto. de Actuaría, Física y Matemáticas, Universidad de las Américas Puebla, Puebla, M\'exico 72810}}
+\date{\small{\today}}
+
+\maketitle
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{abstract}
+En esta práctica se realizo el fenómeno de trabajo que realiza un objeto al moverse por una fuerza externa a a un cierto angulo, sin embargo para esta ocación
+el ángulo fue cero y se usaron foto-compuertas para capturar los datos necesarios para poder representar los resultados, en donde se obtuvo una R2 de 55$\%$ debido a diversos factores que donde sin sorpresa alguna resalta el error y alteración humana.    
+\\
+\\
+{\it Keywords:}  trabajo, masa  
+\\
+\\
+\end{abstract}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{multicols}{2}
+
+\section{Desarrollo teórico}\label{Desarrollo Teorico}                              	% -------------------- Introducción
+El trabajo realizado por una fuerza \textbf{F} sobre un objeto al desplazarse éste una distancia \textbf{d} se define como:
+
+\begin{equation}
+W=Fd
+\end{equation}
+
+La unidad de trabajo en el SI es el julio (J). El signo del trabajo depende del ángulo entre la fuerza y el desplazamiento del objeto. Si éste es menos de 90 grados, el trabajo será positivo. Si el ángulo es mayor de 90 grados, el trabajo será negativo.
+
+El trabajo neto realizado sobre un objeto se calcula sumando los trabajos realizados por todas las fuerzas que actúan sobre él. Un cambio en la energía cinética de un objeto es igual al trabajo neto realizado sobre él. Según la ecuación de conservación de la energía:
+
+\begin{equation}
+W_{neto} = \Delta E_{cinetica}
+\end{equation}
+
+Donde \textbf{W${neto}$} es el trabajo neto y \textbf{$\Delta$E${cinetica}$} es el cambio de energía cinética del objeto.
+
+El trabajo realizado por una fuerza constante \textbf{F} sobre un objeto al desplazarse éste a velocidad \textbf{v} constante durante un tiempo \textbf{t} se calcula como:
+
+\begin{equation}
+W=Fvt
+\end{equation}
+
+La unidad de trabajo es J (julio), igual que en el caso anterior. El signo del trabajo depende nuevamente del ángulo entre la fuerza y la trayectoria del objeto.
+
+\section{Desarrollo Experimental}\label{Desarrollo experimental}				% -------------------- Metodología 
+
+\begin{figure}[H]
+	\centering	
+	%\includegraphics[scale=0.2]{../../static/x0.jpeg}
+	\caption{representación de equipo colocado}
+	\label{fig:1}
+\end{figure}
+
+
+\end{multicols}
+\section{Resultados y análisis}\label{Resultados}			% -------------------- Resultados
+En la tabla \ref{tab:1} a continuación, se pueden observar los datos de distancia, aceleración promedio y fuerza, todos estos obtenidos de manera práctica durante la realización del experimento en cuestión. En la primera columna, se aprecian las distancias que habían de separación entre ambas fotocompuertas, que es la misma que el móvil recorrió, en la segunda columna se aprecian las aceleraciones promedio en m/s, estas se obtuvieron mediante el calculo del promedio de las aceleraciones medidas durante la práctica en cada distancia, por último, tenemos la fuerza, esta fue obtenida al multiplicar la aceleración promedio por la masa del móvil en cuestión, que en este caso fue de 0.505kg. 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+\hline
+Distancia (m) $\pm$ 0.5 &Aceleración Promedio (m/s) &Fuerza (N) \\
+\hline
+0.15 &3.13 $\pm$ 0.01 &1.58 $\pm$ 0.5 \\
+\hline
+0.20 &2.07 $\pm$ 0.07 &1.05 $\pm$ 0.5 \\
+\hline
+0.25 &3.02 $\pm$ 0.01 &1.53 $\pm$ 0.5 \\
+\hline
+0.30 &3.13 $\pm$ 0.24 &1.58 $\pm$ 0.5 \\
+\hline
+0.35 &3.32 $\pm$ 0.19 &1.68 $\pm$ 0.5 \\
+\hline
+0.40 &3.51 $\pm$ 0.10 &1.77 $\pm$ 0.5 \\
+\hline
+0.45 &3.86 $\pm$ 0.16 &1.95 $\pm$ 0.5 \\
+\hline
+0.50 &3.78 $\pm$ 0.08 &1.91 $\pm$ 0.5 \\
+\hline
+0.55 &4.08 $\pm$ 0.45 &2.06 $\pm$ 0.6 \\
+\hline
+0.60 &3.41 $\pm$ 0.21 &1.72 $\pm$ 0.5 \\
+\hline
+\end{tabular}
+\caption{datos registrados}
+\label{tab:1}
+\end{table}
+
+En la gráfica mostrada en la parte de abajo, se puede observar la representación gráfica de los datos mostrados en la tabla anterior. En dicha gráfica se observa una línea en medio de los puntos graficados, esta linea representa un ajuste lineal realizado para tener una referencia con respecto al margen de error presente en cada una de las mediciones, se aprecia que hay algunos puntos algo separados de la trayectoria de la linea de tendencia, lo cual justifica el R2 obtenido, que fue de un 55$\%$ de efectividad en la medición, resultando en una medición decente pero con mucho por mejorar. De igual forma se presenta la ecuación de la recta que es
+\begin{equation*}
+	y = (1.38 \pm 9.83)x + 1.16 \pm 1.61
+\end{equation*}	
+
+De esta manera, se analiza la influencia que tiene la distancia recorrida en la aceleración promedio desarrollada para lograr la trayectoria de un objeto, observándose que a mayor distancia, mayor es la aceleración promedio registrada, de tal forma que se obtuvieron aceleraciones promedio de 2.07 $\pm$ 0.07 $\frac{\mathrm{m}}{\mathrm{s}^2}$ a los 0.20 m, 3.86 $\pm$ 0.16 $\frac{\mathrm{m}}{\mathrm{s}^2}$ a los 0.45 m y 4.08 $\pm$ 0.45 $\frac{\mathrm{m}}{\mathrm{s}^2}$ a los 0.55 m de distancia recorrida; sin embargo, se requiere de estudios posteriores para confirmar este comportamiento.
+
+\begin{figure}[H]
+	\centering	
+	\includegraphics[scale=0.9]{../../static/x1.png}
+	\caption{representación gráfica de los datos}
+	\label{fig:2}
+\end{figure}
+
+Con los datos obtenidos, se pudo obtener el trabajo realizado en el experimento, esto se obtuvo gracias a el proceso ilustrado en la parte de abajo, a través de una integral, se fue resolviendo el problema para poder obtener la variable deseada.
+
+\begin{figure}[H]
+	\centering	
+	\includegraphics[scale=0.2]{../../static/x2.jpeg}
+	\caption{integral}
+	\label{fig:3}
+\end{figure}
+
+
+Posteriormente, se realizó el calculo de las variables anteriores, pero esta vez de forma teórica, es decir, con las fórmulas explicadas en la teoría, se calculó la fuerza, la aceleración y el trabajo realizado por el móvil. El proceso se encuentra desarrollado en la parte de abajo.
+
+\begin{figure}[H]
+	\centering	
+	\includegraphics[scale=0.2]{../../static/x3.jpeg}
+	\caption{operaciones}
+	\label{fig:4}
+\end{figure}
+
+Como se puede observar, el trabajo teórico es mayor al trabajo experimental, esto debido a que las magnitudes usadas en el trabajo teórico son constantes, por lo que no existe ningún tipo de variación en sus valores, mientras que en el experimental no es constante, debido a los diversos fenómenos que ocurren durante el experimento, como un cambio de fuerza en el lanzamiento, el viento en contra del móvil, algún tipo de fricción en el recorrido, etc. Esta sería la principal razón por la cual el trabajo experimental tiene un valor menor en comparación con el valor teórico.
+
+
+
+\section{Conclusiones}\label{Conclusiones}				% -------------------- Conclusiones
+
+\begin{thebibliography}{9}						% -------------------- Bibliografía
+	\bibitem{Martín}
+		Martín, I. (2004). Física General
+		\bibitem{Serway}
+		Serway, R. A., $\&$ Jewett, J. W. (2008). Física para ciencias e ingeniería. (7.a
+ed., Vol. 1). CENGAGE Learning.
+
+\bibitem{Pérez}
+	Newton, I. (1687). Philosophiæ Naturalis Principia Mathematica [Mathematical Principles of Natural Philosophy]. Londini: Jussu Societatis Regiæ ac Typis Josephi Streater.
+\end{thebibliography}
+
+\end{document}	
