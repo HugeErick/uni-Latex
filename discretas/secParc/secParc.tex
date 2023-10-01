@@ -1,0 +1,187 @@
+\documentclass{article}
+%\usepackage[spanish,activeacute]{babel}
+%\usepackage[english,activeacute]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{amsmath,amsfonts,amssymb,amstext,amsthm,amscd}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{graphicx}
+%\usepackage{subfigure}
+\usepackage{subfig}
+%\linespread{1.6}
+\usepackage{float}
+\usepackage{dcolumn}% Align table columns on decimal point(esto lo saque del ejemplo de revtex4)
+\usepackage{bm}% bold math(esto lo saque del ejemplo de revtex4)
+\newcounter{itemR}
+\usepackage{here} %recordar usar el comando[H] para las gráficas que es el comando here en lugar de [h!]
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+%\usepackage{sidecap}
+%\usepackage[spanish,activeacute]{babel}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+%\usepackage{booktabs}% para hacer tablas profesionales con \toprule
+
+
+\lstset{
+  language={C++},
+  basicstyle=\footnotesize,  % El tamaño de la fuente que se usa para el código
+  keywordstyle=\color{blue}, 
+  commentstyle=\color{grey},
+  stringstyle=\color{orange},
+  numbers=left,  % Dónde poner los números de línea
+  numberstyle=\footnotesize,  % El tamaño de la fuente que se usa para los números de línea
+  stepnumber=1,  % El paso entre dos números de línea
+}
+
+\makeatletter
+\newenvironment{CenteredBox}{%
+\begin{Sbox}}{%
+\end{Sbox}\centerline{\parbox{\wd\@Sbox}{\TheSbox}}}% Y lo centra
+\makeatother
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\usepackage[paperwidth=8.5in, paperheight=11.0in, top=1.0in, bottom=1.0in, left=1.0in, right=1.0in]{geometry}
+\lstnewenvironment{code}{\lstset{basicstyle=\ttfamily}}{}
+
+\pagestyle{fancyplain}
+\fancyhead[LE,RO]{Reporte Quick Sort}
+\fancyhead[CE,CO]{}
+\fancyhead[RE,LO]{O23-LIS2012-1}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[CE,CO]{Matemáticas discretas, UDLAP}
+\fancyfoot[RE,LO]{}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+\fancypagestyle{plain}{
+   	\renewcommand{\headrulewidth}{1pt}
+   	\renewcommand{\footrulewidth}{1pt}
+}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+
+
+\title{Quick Sort}
+\author{\small{Erick Gonzalez Parada ID: 178145}\\
+	   \small{Matemáticas discretas, Universidad de las Américas Puebla, Puebla, M\'exico}}
+\date{\small{\today}}
+\maketitle
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{abstract}
+Análisis de Quick Sort.\\
+\\
+\\
+{\it Keywords:}   pivote divide \& conquer   
+\\
+\\
+\end{abstract}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+\section{Introducción}\label{Introducción}                              	% -------------------- Introducción
+\subsection*{Quick Sort en c++}
+\begin{figure}[H]
+\begin{CenteredBox}
+\begin{lstlisting}
+int partition(std::vector<int>& arr, int low, int high) {
+    int pivot = arr[(low + high) / 2];
+    int i = low - 1;
+    int j = high + 1;
+    while (true) {
+        do {
+            i++;
+        } while (arr[i] < pivot);
+        do {
+            j--;
+        } while (arr[j] > pivot);
+        if (i >= j)
+            return j;
+        std::swap(arr[i], arr[j]);
+    }
+}
+
+void quickSort(std::vector<int>& arr, int low, int high) {
+    if (low < high) {
+        int pi = partition(arr, low, high);
+        quickSort(arr, low, pi);
+        quickSort(arr, pi + 1, high);
+    }
+}
+
+
+int main() {
+    std::vector<int> arr = { 10, 7, 8, 9, 1, 5 };
+    int n = arr.size();
+    quickSort(arr, 0, n - 1);
+    std::cout << "Array ordenado: \n";
+    for (int i = 0; i < n; i++)
+        std::cout << arr[i] << " ";
+    return 0;
+}
+\end{lstlisting}
+\end{CenteredBox}
+\caption{C++ Quicksort}
+\label{fig:1}
+\end{figure}
+Como podemos observar, el código del Quicksort, denotado por el script de la figura \ref{fig:1} funciona
+de la siguiente manera, primero divide una matriz grande en dos subarrays más pequeños y luego ordena recursivamentemente los subarrays. Básicamente, tres pasos están involucrados en todo el proceso,
+la selección del pivote, la división, y la repetición hasta que quedan ordenados.
+\subsection*{Mejor caso}
+El mejor caso es cuando el pivote divide limpiamente en dos partes iguales, esto hará que tarde menos. 
+\subsection*{Peor caso}
+El peor caso es cuando el arreglo esta casi ordenado, haciendo que el proceso de comparación haga operaciones innecesarias.
+\section{Función de relación de recurrencia}\label{Fdrdr}
+\subsection*{Mejor caso}
+  Como mencionado, el mejor caso es que el pivote parte el arreglo en dos subarrays de tamaño n/2 "perfectos" de tal manera que el 
+  procesamiento de ellos solo se lleva n tiempo, con la siguiente información nos genera la siguiente ecuación de recurrencia que resolveremos con el teorema maestro
+
+  \begin{equation*}
+    T(n) = 2T(\frac{n}{2}) + n
+  \end{equation*}
+  Donde \textit{a} = 2, \textit{b} = 2, \textit{f(n)} = n, \textit{$n^{\log_b(a)}$} = n.
+  por lo que tenemos el caso dos del teorema maestro que dice 
+  If $f(n) = \theta(n^{\log_b(a)})$ then $T(n) = \theta(n\log_2(f(n)))$ = $\theta(n\log(n))$.
+
+  Como es el mejor caso entonces tenemos que $\Omega(n\log(n))$ \& sorprendentemente y como dato extra el caso promedio no cambia debido a que una ligera optimización
+  con respecto a la selección del pivote puede frecuentar este caso.
+
+
+\subsection*{Peor caso}
+\begin{equation*}
+    T(n) = 2T(\frac{n}{2}) + n^2
+  \end{equation*}
+  donde \textit{a} = 2, \textit{b} = 2, \textit{f(n)} = $n^2$, \textit{$n^{\log_b(a)}$} = n.
+  por lo que ahora tenemos el caso 3 donde f(n) es mayor que \textit{$n^{\log_b(a)}$} entonces
+  If $f(n) = \Omega(n^{\log_b(a) + \epsilon})$ then $T(n) = \Theta(f(n))$ = $\theta(n^2)$.
+
+  Como es el peor caso entones tenemos que $O(n^2)$.
+
+\section{Invariante de ciclo}\label{Idc}
+El invariante del ciclo es que la variable \textit{pi} contiene el valor del pivote correspondiente a esa iteración y eventualmente quedara ordenada.
+\subsection*{inicialización}
+Antes de entrar el ciclo nosotros determinamos donde queremos que sea nuestro pivote e independientemente de la elección lo que sucederá en la siguiente fase es que como nuestro pivote es nuestro pivote
+pues se harán las evaluaciones con nuestro pivote de tal manera que quedara ordenado.  
+\subsection*{mantenimiento}
+Durante el ciclo como mencionamos es el proceso en donde nuestro pivote quedara ordenado, OJO la invariante de ciclo es
+que la variable \textit{pi} siempre contenga el pivote, no se esta detallando que la invariante también es que esta ya este ordenada
+por lo que si nuestra invariante fuese falsa, no estaríamos ordenando el array.
+\subsection*{finalización}
+Al finalizar se mantuvo verdadero siempre, la variante \textit{pi} nunca tuvo un valor erróneo.
+\section{Conclusiones (problema real)}\label{Conclusiones}				% -------------------- Conclusiones
+  a pesar que de que te pueden preguntar su implementación en una entrevista,
+  imagina que trabajas en una empresa de logística y tienes una gran cantidad de paquetes que deben ser entregados a diferentes destinos en todo el país. Los paquetes están mezclados y necesitas organizarlos en el orden correcto para optimizar las rutas de entrega y minimizar el tiempo de viaje. 
+  \\
+  En este ejemplo se puede ocupar sencillamente quicksort y bum listo.
+\end{document}	
