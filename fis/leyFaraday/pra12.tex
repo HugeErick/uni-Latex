@@ -33,7 +33,7 @@
 \usepackage[paperwidth=8.5in, paperheight=11.0in, top=1.0in, bottom=1.0in, left=1.0in, right=1.0in]{geometry}
 
 \pagestyle{fancyplain}
-\fancyhead[LE,RO]{Práctica $\#$11}
+\fancyhead[LE,RO]{Práctica $\#$12}
 \fancyhead[CE,CO]{}
 \fancyhead[RE,LO]{P23-FIS1012-12}
 \fancyfoot[LE,RO]{\thepage}
@@ -59,7 +59,7 @@
 % ------------------------------------------------------------------------------------------------------------------------------------------------------
 % ------------------------------------------------------------------------------------------------------------------------------------------------------
 
-\title{Fuerza de Lorentz}
+\title{Ley de Faraday}
 \author{\small{Luis Alberto Gil Bocanegra ID: 177410, Erick Gonzalez Parada ID: 178145}\\
  \small{Gartzen Aldecoa Barroso ID: 178034 .}\\		% ----- Varios autores separarlos por comas:  \small{Nombre(s) de (los) autor(es)\footnote{ID; correo@udlap.mx}, Nombre(s) de (los) autor(es)\footnote{ID; correo@udlap.mx}
 	   \small{Depto. de Actuaría, Física y Matemáticas, Universidad de las Américas Puebla, Puebla, M\'exico 72810}}
@@ -72,13 +72,14 @@
 % ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 \begin{abstract}
-La práctica consistió en ver la interacción de una corriente que pasa por un alambre con respecto a un campo magnético
-está consistía de varios imanes acomodados y se midió con respecto a todos los circuitos, como cambiaba si restábamos imanes
-y nuestros resultados fueron correctos, el comportamiento de las gráficas fueron correctas excepto cuando nos equivocamos en el orden
-de los polos de ciertos imanes lo que volteo nuestro signo.
+Se observo el comportamiento de un imán rebotante
+con esta oscilación del imán dentro de la bobina se midió el voltaje 
+y se graficaron voltaje vs tiempo cuando solo un polo oscila y cuando ambos,
+por ultimo se identificaron los máximos locales para graficarlos separadamente
+resultando en gráficas con comportamientos correctos.
 \\
 \\
-{\it Keywords:} circuito , corriente  
+{\it Keywords:} Lineas de campo , corriente  
 \\
 \\
 \end{abstract}
@@ -88,37 +89,25 @@ de los polos de ciertos imanes lo que volteo nuestro signo.
 \begin{multicols}{2}
 \section{Desarrollo teórico}\label{Desarrollo Teorico}                              	% -------------------- Introducción
 Nuestro objetivo fue observar la interacción entre la corriente
- que circula por un alambre y un campo
-magnético que rodea el alambre.
-\cite{Fernandez}
+, el angulo con respecto a un campo magnético que "rebota"
+y encontrar la fuerza electromotriz con respecto a 
+las leyes de Lens
+\cite{Leskow}
 
-La fuerza de Lorentz describe la acción de los campos eléctrico y magnético sobre una partícula cargada en movimiento. Fue descubierta en 1895 por el físico neerlandés Hendrik Lorentz y resulta de gran importancia en electromagnetismo y física de partículas.\\
 
-La fuerza de Lorentz se expresa mediante dos fórmulas dependiendo del sistema de referencia utilizado:
+La Ley de Inducción de Faraday describe cómo una variación en un campo magnético puede inducir una fuerza electromotriz (f.e.m.) en un circuito eléctrico circundante. Fue descubierta experimentalmente por el físico inglés Michael Faraday en 1831.
 
-En un sistema de referencia donde la partícula está en reposo respecto al observador, la fuerza $\mathbf{F}$ se da por:
 
-\begin{equation}
-\mathbf{F} = q\mathbf{E}
-\end{equation}
-
-Donde $q$ es la carga eléctrica de la partícula y $\mathbf{E}$ el campo eléctrico en ese punto.
-
-En un sistema de referencia donde la partícula se mueve a velocidad $\mathbf{v}$, la fuerza $\mathbf{F}$ que actúa sobre ella se expresa como:
+Según Faraday, la f.e.m. inducida en un circuito cerrado es directamente proporcional al ritmo de cambio del flujo magnético a través de la superficie delimitada por el circuito. Matemáticamente se expresa como:
 
 \begin{equation}
-\mathbf{F} = q\mathbf{E}+q\mathbf{v}\times\mathbf{B}
+\epsilon = - \frac{d\Phi_B}{dt}
 \end{equation}
 
-Donde $\mathbf{B}$ es el campo magnético en ese punto y el segundo término representa la fuerza magnética de Lorentz.
+Donde $\epsilon$ es la f.e.m. inducida (en voltios), $\Phi_B$ es el flujo magnético (en webers) y $\frac{d\Phi_B}{dt}$ es la variación del flujo magnético con el tiempo (en webers/segundo). La constante de proporcionalidad se toma igual a -1 para cumplir la convención de signos en electromagnetismo.
 
-De forma equivalente, para una corriente eléctrica $\mathbf{I}$, la fuerza es:
+La variación del flujo magnético con el tiempo induce corrientes eléctricas en el circuito que a su vez generan un campo magnético opuesto al cambio que las provocó. Esto se debe a que toda variación de un campo magnético induce una f.e.m. en cualquier circuito que lo intersecte. Las líneas de fuerza del campo cortan las de los electrones en movimiento y los empujan, generando la corriente eléctrica.
 
-\begin{equation}
-\mathbf{F}= I\mathbf{L}\times\mathbf{B}
-\end{equation}
-
-Donde $\mathbf{L}$ es la dirección de la corriente.
 
 
 \section{Desarrollo Experimental}\label{Desarrollo experimental}				% -------------------- Metodología 
@@ -126,67 +115,65 @@ Donde $\mathbf{L}$ es la dirección de la corriente.
 A continuación se presenta una lista de materiales:
 \begin{enumerate}
     \item Fuente de bajo voltaje 0-24 V
-    \item Cables banana-banana (2)
+    \item Nueces (3)
     \item Soporte universal (varilla y base)
-    \item Báscula 
-    \item Transportador geométrico 
-    \item Imán de herradura con base 
-    \item Balanza de corriente eléctrica 
+    \item Imán cilíndrico 
+    \item Resorte
+    \item Bobina de Helmholtz 200 vueltas 
+    \item Sensor de voltaje 
+    \item Sensor de movimiento rotacional 
+    \item Interfaz Universal 
+    \item Varilla corta y vástagos(bobina y plástico) 
 \end{enumerate}
-Circuitos de diferente longitud
-Se montan en la balanza
-Se coloca entre los imanes sin tocarlos
-El imán se coloca sobre la balanza y se alimenta
-con la fuente.
-\subsection*{observaciones}
-No tocar cuando la fuente este encendida.
+Se procedió a montar el equipo de manera que el imán pueda oscilar dentro de la bobina. Posteriormente, se llevó a cabo la medición del voltaje inducido en la bobina durante este proceso.
+
+Para visualizar los resultados de manera efectiva, se graficó el voltaje en función del tiempo en dos escenarios distintos:
+
+En el primer escenario, se observa la oscilación cuando solo un polo del imán está en movimiento.
+En el segundo escenario, se registra la oscilación cuando ambos polos del imán están en movimiento.
+
+Posteriormente, se identificaron los máximos locales en ambas gráficas y se aplicó una línea de tendencia para una mejor interpretación de los datos. Este análisis proporcionará una comprensión más clara de la relación entre el movimiento del imán y el voltaje inducido en la bobina.
 \end{multicols}
 \section{Resultados y análisis}\label{Resultados}			% -------------------- Resultados
 
 \begin{figure}[H]
    \centering
-   \includegraphics[scale=0.6]{../imgs/o.png}
-   \caption{Corriente vs Fuerza}
+   \includegraphics[scale=0.7]{../imgs/f.png}
+   \caption{Un polo}
    \label{Fig:1}
 \end{figure}
 
-En la figura \ref{Fig:1}, se pueden apreciar los datos obtenidos al comparar la corriente establecida en el circuito, con la fuerza que la misma generaba sobre una serie de imanes. En el gráfico se puede apreciar que todas las líneas generadas por los datos recabados resultaron en trazos lineales ascendentes, es decir, que fueron creciendo proporcionalmente a como iba aumentando la corriente inducida al circuito en cuestión.
 \begin{figure}[H]
    \centering
-   \includegraphics[scale=0.6]{../imgs/o1.png}
-   \caption{Imanes vs Fuerza (1)}
+   \includegraphics[scale=0.7]{../imgs/f0.png}
+   \caption{Los dos polo}
    \label{Fig:2}
 \end{figure}
 
-En la figura \ref{Fig:2}, se realizan los gráficos con los parámetros del numero de imanes presente en el pesaje en comparación con la fuerza ejercida por el circuito sobre dichos imanes. En esta primera gráfica se pueden apreciar que los puntos marcados están dispersos y con una distribución variable, esto debido que al momento en que se realizó la medición, no se tomaron en cuenta la posición de los polos y afecto el valor medido, a pesar de que la corriente se mantuvo constante.
+La razón por la cual se presenta un zigzag en la gráfica de la figura \ref{Fig:2} en la que se miden los 2 polos del imán, es debido a que lo que busca el fenómeno con eso es mantener lo más estable posible la densidad del flujo magnético, ya que al medirse ambos polos del imán, la densidad se ve afectada por lo que el propio campo realiza estos ajustes en la densidad para mantenerla constante.
 
 \begin{figure}[H]
    \centering
-   \includegraphics[scale=0.6]{../imgs/o2.png}
-   \caption{Imanes vs Fuerza (2)}
+   \includegraphics[scale=0.7]{../imgs/maxf.png}
+   \caption{máximos de la \ref{Fig:1}}
    \label{Fig:3}
 \end{figure}
 
-En la figura \ref{Fig:3}, el gráfico fue realizado con los mismos parámetros que el anterior, solo que en este caso el trazo salió lineal y acorde a lo establecido en la teoría, esto debido a que en esta ocasión si se tomó en cuenta la posición en la que se encontraban colocados los polos de los imanes, haciendo que la medición resultará muchísimo más exacta y confiable que la anterior. De igual forma, el amperaje se mantuvo constante.
-
 \begin{figure}[H]
    \centering
-   \includegraphics[scale=0.6]{../imgs/o3.png}
-   \caption{Longitud vs Fuerza}
+   \includegraphics[scale=0.7]{../imgs/maxf0.png}
+   \caption{máximos de la \ref{Fig:2}}
    \label{Fig:4}
 \end{figure}
-
-En la figura \ref{Fig:4}, los parámetros establecidos en el gráfico fue la longitud del circuito y la fuerza ejercida por el mismo a la balanza. En este caso, los circuitos fueron variando según la longitud que tuvieran, mientras que la corriente inducida al mismo circuito se mantuvo constante, resultando en un trazo lineal,  haciendo ver que el tamaño del circuito afecta directamente en la fuerza producida por la corriente, aún cuando esta se mantenga constante.
-
 
 
 \section{Conclusiones}\label{Conclusiones}				% -------------------- Conclusiones
 El objetivo si se cumplió, la teoría se asemejo muy bien a la práctica y como se pudo observar en las gráficas y como ya mencionado el comportamiento de nuestros datos es el correcto a excepción de cuando volteamos los polos, por otro lado y como ultimo comentario
-se ha desarrollado teóricamente la expresión de la fuerza de Lorentz dependiendo del sistema de referencia, distinguiendo entre la forma en reposo y en movimiento de la partícula cargada. Esta cuenta con una importancia fundamental en electromagnetismo y mecánica cuántica.
+La Ley de Inducción de Faraday establece que un cambio en el flujo magnético a través de un circuito induce una fuerza electromotriz (fem) en el mismo. Esta fem induce una corriente eléctrica cuando el circuito está cerrado. La magnitud de la fem inducida es proporcional a la rapidez con la que cambia el flujo magnético. En resumen, la ley de inducción de Faraday describe la relación entre la variación del campo magnético y la generación de corriente eléctrica, fundamental para entender los principios de los generadores eléctricos y otros dispositivos electromagnéticos. Esta ley es una piedra angular en la comprensión de la relación entre la electricidad y el magnetismo.
 
 \begin{thebibliography}{9}						% -------------------- Bibliografía
-	\bibitem{Fernandez}
- Fernández, J. L. (s. f.). Ley de Lorentz. Fisicalab. https://www.fisicalab.com/apartado/ley-de-lorentz
+	\bibitem{Leskow}
+ Leskow, E. C. (2021, 15 julio). Ley de Faraday - concepto, historia, fórmula y ejemplos. Concepto. https://concepto.de/ley-de-faraday/
 	\bibitem{Serway}
 	Serway, R. A., $\&$ Jewett, J. W. (2008). Física para ciencias e ingeniería. (7.a
 ed., Vol. 1). CENGAGE Learning.
