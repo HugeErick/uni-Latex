@@ -1,0 +1,90 @@
+% arara: pdflatex
+\documentclass{article}
+%\usepackage[spanish,activeacute]{babel}
+%\usepackage[english,activeacute]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amsfonts,amssymb,amstext,amsthm,amscd}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{dcolumn}% Align table columns on decimal point(esto lo saque del ejemplo de revtex4)
+\usepackage{bm}% bold math(esto lo saque del ejemplo de revtex4)
+\newcounter{itemR}
+\usepackage{here} \usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{ragged2e}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\usepackage[paperwidth=8.5in, paperheight=11.0in, top=1.0in, bottom=1.0in, left=1.0in, right=1.0in]{geometry}
+
+\pagestyle{fancyplain}
+\fancyhead[LE,RO]{Reporte $\#$4}
+\fancyhead[CE,CO]{}
+\fancyhead[RE,LO]{P24-LRT2032-1}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[CE,CO]{Laboratorio de Circuitos Eléctricos, UDLAP}
+\fancyfoot[RE,LO]{}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+\fancypagestyle{plain}{
+   	\renewcommand{\headrulewidth}{1pt}
+   	\renewcommand{\footrulewidth}{1pt}
+}
+
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\title{Osciloscopio y generador de funciones}
+\author{\small{Erick Gonzalez Parada ID: 178145, ID: 177465}\\ 
+\small{ Depto. Computación Electrónica y Mecatrónica.} \\
+\small {Docente: Mtro. Omar Fernando Ortiz Aguilera}}
+\date{\small{\today}}
+
+\maketitle
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{abstract}
+	\begin{justify}
+		abstract
+		Se aprendio y analizo el osciloscopio y el generador de funciones durante la sesion de laboratorio
+		\end{justify}
+{\it Keywords:}   función, botones 
+\end{abstract}
+\begin{multicols}{2}
+\section{Objetivo}\label{Objetivo}
+
+\section{Introducción}\label{sec:intro}
+
+\section{Análisis Teórico}\label{sec:analiTeorico}
+
+\section{Resultados esperados}\label{sec:resEsperados}
+
+\section{Resultados obtenidos}\label{sec:resObtenidos}
+
+\section{Conclusiones}\label{sec:conclusion}
+
+\section*{Referencias}\label{sec:referencias}	
+No hubo usos de referencias para este trabajo
+\end{multicols}
+\end{document}
+
